@@ -1,0 +1,44 @@
+#main-container {
+	display: flex;
+	justify-content: center;
+	margin-top: 5%;
+	margin-bottom: 7%;
+}
+
+.container {
+	padding: 1%;
+	display: flex;
+	flex-direction: column;
+	min-height: 20vh;
+	background-color: #f0f5f0;
+	border-radius: 15px;
+	width: 80%;
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+
+}
+
+.navigation-ref {
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	font-size: 25px;
+	color: #f0f5f0;
+	margin-left: 2%;
+	margin-right: 2%; 
+}
+
+.navigation-ref:hover {
+	color: #ffa8cc;
+	text-decoration: underline;
+}
+
+#main-navigation {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1%;
+	margin-top: 1%;
+	margin-left: 3%;
+	margin-right: 3%;  
+	border: 5px solid #3B193D;
+	border-radius: 30px;
+	background-color: #FE5340; 
+}

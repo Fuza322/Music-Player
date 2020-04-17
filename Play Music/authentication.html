@@ -7,22 +7,38 @@
 	<meta name="description" content="Play Music - это универсальный музыкальныйы плеер, позволяющий вам слушать песни любимых исполнителей и жанров, а также создать свой собственный плейлист.">
 	<link rel="shortcut icon" href="assets/icon/musicPlayerIcon.ico" type="image/icon">
 	<link rel="stylesheet" type="text/css" href="assets/css/headerStyle.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/authentication.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/buttonsHeader.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/buttonsAuthentication.css">
 </head>
 
 <body>
 	<header id="header-flex-R">
 		<a href="index.html">
-			<div id="logo-div-flex-center">
+			<div id="logo-div-flex">
 				<img id="logo-size-header" src="assets/images/logo.jpg" alt="Logo">
 			</div>
 		</a>
 		<a href="index.html">
 			<div id="div-music-player-name">Play Music</div>
 		</a>
+		<div id="block-auth">
+			<button class="btn" onclick="window.location.href='index.html'">На главную</button>
+		</div>
 	</header>
 	<main>
-		<nav>
-		</nav>
+		<div class="form">
+			<h1 class="auth-text">Авторизация</h1>
+			<div class="div-help-text">
+				<p>Логин</p>
+			</div>
+			<input type="text" placeholder="Введите логин">
+			<div class="div-help-text">
+				<p>Пароль</p>
+			</div>
+			<input type="password" placeholder="Введите пароль">
+			<button class="btn-auth">Войти</button>
+		</div>
 	</main>
 	<footer>
 	</footer>

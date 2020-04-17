@@ -4,12 +4,12 @@
 }
 
 body {
-	background-color: #ff8caf;
+	background-color: #E0CAB2;
 }
 
 header {
 	height: 150px;
-	background: linear-gradient(to right, #3a2d8a, #ff0a5c);
+	background: #3b193d;
 }
 
 a { 
@@ -18,9 +18,10 @@ a {
 
 #header-flex-R {
 	display: flex;
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
-#logo-div-flex-center {
+#logo-div-flex {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -44,6 +45,6 @@ a {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-left: 35%;
+	margin-left: 30%;
     padding-right: auto;
 }

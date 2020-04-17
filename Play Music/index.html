@@ -7,12 +7,15 @@
 	<meta name="description" content="Play Music - это универсальный музыкальныйы плеер, позволяющий вам слушать песни любимых исполнителей и жанров, а также создать свой собственный плейлист.">
 	<link rel="shortcut icon" href="assets/icon/musicPlayerIcon.ico" type="image/icon">
 	<link rel="stylesheet" type="text/css" href="assets/css/headerStyle.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/headerButtons.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/buttonsHeader.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/sectionsСontainer.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/sectionsText.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/sectionsDescriptionText.css">
 </head>
 <body>
 	<header id="header-flex-R">
 		<a href="index.html">
-			<div id="logo-div-flex-center">
+			<div id="logo-div-flex">
 				<img id="logo-size-header" src="assets/images/logo.jpg" alt="Logo">
 			</div>
 		</a>
@@ -24,8 +27,15 @@
 			<button class="btn" onclick="window.location.href='registration.html'">Регистрация</button>
 		</div>
 	</header>
-	<main>
-		<nav>
+	<main id="main-container">
+		<nav class="container">
+			<h1 class="sections-text">Главное</h1>
+			<div id="main-navigation">
+				<a class="navigation-ref" href="#">Создать плейлист</a>
+				<a class="navigation-ref" href="#">Музыкальные жанры</a>
+				<a class="navigation-ref" href="#">Исполнители</a>
+				<a class="navigation-ref" href="#">Обратная связь</a>
+			</div>
 		</nav>
 		<section>
 		</section>
