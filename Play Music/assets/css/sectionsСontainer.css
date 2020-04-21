@@ -1,11 +1,13 @@
 #main-container {
 	display: flex;
+	align-items: center;
 	justify-content: center;
+	flex-direction: column;
 	margin-top: 5%;
 	margin-bottom: 7%;
 }
 
-.container {
+.nav-container {
 	padding: 1%;
 	display: flex;
 	flex-direction: column;
@@ -14,7 +16,19 @@
 	border-radius: 15px;
 	width: 80%;
 	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
 
+#main-navigation {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1%;
+	margin-top: 1%;
+	margin-left: 3%;
+	margin-right: 3%;  
+	border: 5px solid #3B193D;
+	border-radius: 30px;
+	background-color: #FE5340; 
 }
 
 .navigation-ref {
@@ -30,15 +44,58 @@
 	text-decoration: underline;
 }
 
-#main-navigation {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+.playlist-container {
+	margin-top: 4%; 
 	padding: 1%;
-	margin-top: 1%;
-	margin-left: 3%;
-	margin-right: 3%;  
-	border: 5px solid #3B193D;
-	border-radius: 30px;
-	background-color: #FE5340; 
+	display: flex;
+	flex-direction: column;
+	min-height: 50vh;
+	background-color: #f0f5f0;
+	border-radius: 15px;
+	width: 80%;
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.musicGenre-container {
+	margin-top: 4%; 
+	padding: 1%;
+	display: flex;
+	flex-direction: column;
+	min-height: 50vh;
+	background-color: #f0f5f0;
+	border-radius: 15px;
+	width: 80%;
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.musicGenre-container {
+	margin-top: 4%; 
+	padding: 1%;
+	display: flex;
+	flex-direction: column;
+	min-height: 50vh;
+	background-color: #f0f5f0;
+	border-radius: 15px;
+	width: 80%;
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.music-artists-container {
+	margin-top: 4%; 
+	padding: 1%;
+	display: flex;
+	flex-direction: column;
+	min-height: 30vh;
+	background-color: #f0f5f0;
+	border-radius: 15px;
+	width: 80%;
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.div-music-artists-list {
+	padding-top: 1%;
+	padding-left: 4%;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	font-size: 20px;
+	font-style: italic;
 }

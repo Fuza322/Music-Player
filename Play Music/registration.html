@@ -6,28 +6,28 @@
 	<meta name="author" content="Osipik Ivan">
 	<meta name="description" content="Play Music - это универсальный музыкальныйы плеер, позволяющий вам слушать песни любимых исполнителей и жанров, а также создать свой собственный плейлист.">
 	<link rel="shortcut icon" href="assets/icon/musicPlayerIcon.ico" type="image/icon">
+	<link rel="stylesheet" type="text/css" href="assets/css/basicElements.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/headerStyle.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/authentication.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/buttonsHeader.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/buttonsAuthentication.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/button.css">
 </head>
 
 <body>
-	<header id="header-flex-R">
+	<header class="header-flex">
 		<a href="index.html">
 			<div id="logo-div-flex">
-				<img id="logo-size-header" src="assets/images/logo.jpg" alt="Logo">
+				<img id="logo-size-header" src="assets/images/headerLogo.jpg" alt="Logo">
 			</div>
 		</a>
 		<a href="index.html">
 			<div id="div-music-player-name">Play Music</div>
 		</a>
 		<div id="block-auth">
-			<button class="btn" onclick="window.location.href='index.html'">На главную</button>
+			<button class="btn-light-red" onclick="window.location.href='index.html'">На главную</button>
 		</div>
 	</header>
 	<main>
-		<div class="form">
+		<form>
 			<h1 class="auth-text">Регистрация</h1>
 			<div class="div-help-text">
 				<p>Логин</p>
@@ -38,8 +38,8 @@
 			</div>
 			<input type="password" placeholder="Введите пароль">
 			<input type="password" placeholder="Повторите пароль">
-			<button class="btn-auth">Зарегистрироваться</button>
-		</div>
+			<button class="btn-red">Зарегистрироваться</button>
+		<form>
 	</main>
 	<footer>
 	</footer>

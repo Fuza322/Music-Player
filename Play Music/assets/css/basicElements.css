@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+	background: #3b193d;
+	height: 10%;
+}
+
+a { 
+	text-decoration: none;
+} 
+
+body {
+	background-color: #E0CAB2;
+}
+
+
+footer {
+	width: 100%;
+	background-color: #65bcbf;
+}

@@ -1,8 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
 /* style button */
 button {
   margin: 30px 20px;
@@ -19,14 +14,27 @@ button {
 }
 
 /* btn */
-.btn-auth {
+.btn-light-red {
+  color: #FAF7F8;
+  border-color: #FF5E4E;
+  background: -webkit-linear-gradient(left, #FF5E4E, #FF5E4E) no-repeat;
+  background: linear-gradient(to right, #FF5E4E, #FF5E4E) no-repeat;
+  background-size: 0% 100%;
+}
+.btn-light-red:hover {
+  background-size: 100% 100%;
+  color: #27323A;
+}
+
+/* btn */
+.btn-red {
   color: #FF5440;
   border-color: #FF5440;
   background: -webkit-linear-gradient(left, #FF5440, #FF5440) no-repeat;
   background: linear-gradient(to right, #FF5440, #FF5440) no-repeat;
   background-size: 0% 100%;
 }
-.btn-auth:hover {
+.btn-red:hover {
   background-size: 100% 100%;
   color: #27323A;
 }
