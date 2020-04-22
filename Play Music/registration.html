@@ -10,6 +10,8 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/headerStyle.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/authentication.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/button.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/text.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/footerStyle.css">
 </head>
 
 <body>
@@ -17,10 +19,8 @@
 		<a href="index.html">
 			<div id="logo-div-flex">
 				<img id="logo-size-header" src="assets/images/headerLogo.jpg" alt="Logo">
+				<div id="div-music-player-name">Play Music</div>
 			</div>
-		</a>
-		<a href="index.html">
-			<div id="div-music-player-name">Play Music</div>
 		</a>
 		<div id="block-auth">
 			<button class="btn-light-red" onclick="window.location.href='index.html'">На главную</button>
@@ -41,7 +41,37 @@
 			<button class="btn-red">Зарегистрироваться</button>
 		<form>
 	</main>
-	<footer>
+	<footer id="footer-flex">
+		<nav class="footer-nav">
+			<p class="footer-title-text">Навигация</p>
+			<ul class="footer-nav-text" type="circle">
+				<li><a href="#CreatePlaylist">Создать плейлист</a></li>
+				<li><a href="#MusicGenre">Музыкальные жанры</a></li>
+				<li><a href="#MusicArtists">Исполнители</a></li>
+				<li><a href="#Feedback">Обратная связь</a></li>
+			</ul>
+		</nav>
+		<div>
+			<p class="footer-title-text" id="Feedback">Обратная связь:</p>
+			<div class="feedback-container">
+				<p class="footer-text"> Есть вопросы или предложения? <br>
+					Мы с радостью вас выслушаем!
+				</p>
+			</div>
+		</div>
+		<div>
+			<p class="footer-title-text">Почта:</p>
+			<p class="footer-text">vanya.osipik322@gmail.com</p>
+			<div class="feedback-container">
+				<p class="footer-title-text">Контактный телефон:</p>
+				<p class="footer-text">+375(29)-139-15-82</p>
+			</div>
+		</div>
+		<a href="index.html">
+			<div>
+				<img id="logo-size-header" src="assets/images/footerLogo.jpg" alt="Logo">
+			</div>
+		</a>
 	</footer>
 </body>
 </html>

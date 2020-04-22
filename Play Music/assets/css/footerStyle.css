@@ -1,0 +1,14 @@
+#footer-flex {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding-top: 0.5%;
+}
+
+.footer-nav {
+	margin-left: 2.5%;
+}
+
+.feedback-container {
+	margin-top: 3%;
+}
