@@ -7,6 +7,7 @@
 	<meta name="description" content="Play Music - это универсальный музыкальныйы плеер, позволяющий вам слушать песни любимых исполнителей и жанров, а также создать свой собственный плейлист.">
 	<link rel="shortcut icon" href="assets/icon/musicPlayerIcon.ico" type="image/icon">
 	<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="assets/css/basicElements.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/headerStyle.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/button.css">
@@ -29,9 +30,9 @@
 			<button class="btn-light-red" onclick="window.location.href='registration.html'">Регистрация</button>
 		</div>
 	</header>
-<!--------------------------------------------------------------------------------------------------------------------------------->
+
 	<main id="main-container">
-<!--------------------------------------------------------------------------------------------------------------------------------->
+<!----------->
 		<nav class="nav-container">
 			<h1 class="sections-text">Главное</h1>
 			<div id="main-navigation">
@@ -41,7 +42,7 @@
 				<a class="navigation-ref" href="#Feedback">Обратная связь</a>
 			</div>
 		</nav>
-<!--------------------------------------------------------------------------------------------------------------------------------->
+<!----------->
 		<section class="playlist-container">
 			<h2 class="sections-text" id="CreatePlaylist">Создать плейлист</h2>
 			<div class="description-text">
@@ -55,7 +56,7 @@
 				</ul>
 			</div>
 		</section>
-<!--------------------------------------------------------------------------------------------------------------------------------->
+<!----------->
 		<section class="musicGenre-container">
 			<h2 class="sections-text" id="MusicGenre">Музыкальные жанры</h2>
 			<div class="description-text">
@@ -73,7 +74,7 @@
 				</ul>
 			</div>
 		</section>
-<!--------------------------------------------------------------------------------------------------------------------------------->
+<!----------->
 		<section class="music-artists-container">
 			<h2 class="sections-text" id="MusicArtists">Исполнители</h2>
 			<div class="description-text">
@@ -81,21 +82,21 @@
 			</div>
 			<div class="div-music-artists-list">
 				<ul type="circle">
-        			<li><a href="#">Metallica</a></li>
-        			<li><a href="#">Слот</a></li>
-        			<li><a href="#">Наутилус Помпилиус</a></li>
-        			<li><a href="#">Eminem</a></li>
-        			<li><a href="#">Ляпис Трубецкой</a></li>
-        			<li><a href="#">Artic Monkeys</a></li>
-        			<li><a href="#">Noize MC</a></li>
-        			<li><a href="#">Boney M.</a></li>
-        			<li><a href="#">Adele</a></li>
+        			<li><a class="music-artists-ref" href="#">Metallica</a></li>
+        			<li><a class="music-artists-ref" href="#">Слот</a></li>
+        			<li><a class="music-artists-ref" href="#">Наутилус Помпилиус</a></li>
+        			<li><a class="music-artists-ref" href="#">Eminem</a></li>
+        			<li><a class="music-artists-ref" href="#">Ляпис Трубецкой</a></li>
+        			<li><a class="music-artists-ref" href="#">Artic Monkeys</a></li>
+        			<li><a class="music-artists-ref" href="#">Noize MC</a></li>
+        			<li><a class="music-artists-ref" href="#">Boney M.</a></li>
+        			<li><a class="music-artists-ref" href="#">Adele</a></li>
     			</ul>
 			</div>
 		</section>
-<!--------------------------------------------------------------------------------------------------------------------------------->
+<!----------->
 	</main>
-<!--------------------------------------------------------------------------------------------------------------------------------->
+<!----------->
 	<footer id="footer-flex">
 		<nav class="footer-nav">
 			<p class="footer-title-text">Навигация</p>
@@ -128,9 +129,10 @@
 			</div>
 		</a>
 	</footer>
-<!--------------------------------------------------------------------------------------------------------------------------------->
+<!----------->
 	<section class="bottom-player" position="bottom" sectionfixed="true">
+		Здесь будет фиксированный section, в котором будет распологать плеер с текущей проигрываемое композицей (пока что закрывает контент в footer)
 	</section>
-<!--------------------------------------------------------------------------------------------------------------------------------->
+<!----------->
 </body>
 </html>

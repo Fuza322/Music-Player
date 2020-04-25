@@ -8,16 +8,17 @@
 .auth-text {
  	font-family: 'Lobster', cursive;
 	font-size: 40px;
-	color: #FF5440;
+	color: #f55e18;
 	margin-bottom: 2%; 
 }
 
 .div-help-text {
+	font-family: 'Varela Round', sans-serif;
 	width: 26%;
 }
 
 .navigation-ref {
-	font-family: cursive;
+	font-family: 'Varela Round', sans-serif;
 	font-size: 25px;
 	color: #f0f5f0;
 	margin-left: 2%;
@@ -31,15 +32,18 @@
 .div-music-artists-list {
 	padding-top: 1%;
 	padding-left: 4%;
-	font-family: cursive;
+	font-family: 'Varela Round', sans-serif;
 	font-size: 20px;
-	font-style: italic;
 }
 
-.description-text {
-	padding-top: 0.5%;
-	font-family: cursive;
+.music-artists-ref {
+	padding-top: 1%;
+	font-family: 'Varela Round', sans-serif;
 	font-size: 20px;
+}
+
+.music-artists-ref:hover {
+	color: #FE5340;
 }
 
 .sections-text {
@@ -48,20 +52,26 @@
 	color: #f55e18;
 }
 
-.footer-title-text {
+.description-text {
 	padding-top: 0.5%;
-	font-family: cursive;
+	font-family: 'Varela Round', sans-serif;
+	font-size: 20px;
+}
+
+.footer-title-text {
+	padding-top: 1%;
+	font-family: 'Varela Round', sans-serif;
 	font-size: 25px;
 }
 
 .footer-text {
-	font-family: cursive;
-	font-size: 15px;
+	font-family: 'Varela Round', sans-serif;
+	font-size: 18px;
 }
 
 .footer-nav-text {
-	font-family: cursive;
-	font-size: 15px;
+	font-family: 'Varela Round', sans-serif;
+	font-size: 19px;
 }
 
 .footer-nav-text:hover {

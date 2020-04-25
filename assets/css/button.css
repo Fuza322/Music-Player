@@ -4,7 +4,7 @@ button {
   padding: 15px 20px;
   border-radius: 10px;
   border: 4px solid;
-  font: 16px 'Comic Sans MS', cursive, sans-serif;
+  font-family: 'Varela Round', sans-serif;
   text-transform: uppercase;
   background: none;
   outline: none;
@@ -23,7 +23,7 @@ button {
 }
 .btn-light-red:hover {
   background-size: 100% 100%;
-  color: #27323A;
+  color: #f55e18;
 }
 
 /* btn */

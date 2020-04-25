@@ -18,8 +18,14 @@ form {
 
 form input {
 	font-size: 18px;
-	font-family: "Comic Sans MS", cursive, sans-serif;
+  	font-family: 'Varela Round', sans-serif;
 	padding: 5px;
-	margin: 12px 0;
+	margin: 10px 0;
 	outline-color: #f55e18;
+}
+
+.div-button-auth {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
