@@ -6,12 +6,15 @@
 	<meta name="author" content="Osipik Ivan">
 	<meta name="description" content="Play Music - это универсальный музыкальныйы плеер, позволяющий вам слушать песни любимых исполнителей и жанров, а также создать свой собственный плейлист.">
 	<link rel="shortcut icon" href="assets/icon/musicPlayerIcon.ico" type="image/icon">
+	<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="assets/css/basicElements.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/headerStyle.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/button.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/sectionsСontainer.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/liButtonStyle.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/text.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/footerStyle.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/bottomPlayer.css">
 </head>
 <body>
 	<header class="header-flex">
@@ -26,7 +29,9 @@
 			<button class="btn-light-red" onclick="window.location.href='registration.html'">Регистрация</button>
 		</div>
 	</header>
+<!--------------------------------------------------------------------------------------------------------------------------------->
 	<main id="main-container">
+<!--------------------------------------------------------------------------------------------------------------------------------->
 		<nav class="nav-container">
 			<h1 class="sections-text">Главное</h1>
 			<div id="main-navigation">
@@ -36,26 +41,39 @@
 				<a class="navigation-ref" href="#Feedback">Обратная связь</a>
 			</div>
 		</nav>
+<!--------------------------------------------------------------------------------------------------------------------------------->
 		<section class="playlist-container">
 			<h2 class="sections-text" id="CreatePlaylist">Создать плейлист</h2>
 			<div class="description-text">
 				Слушайте плейлист с подходящей именно для вас музыкой.<br>
 				Можете создать сразу несколько плейлистов, добавляя в них ваши любимые композиции.
 			</div>
-			<div>
-			<!-- Кнопки для добавления/просмотра плейлиста -->
+			<div class="div-playlist">
+				<!-- Кнопки для добавления/просмотра плейлиста -->
+				<ul>
+					<li class="li-buttom"> <a href="#"><img class="image-add-playlist" src="assets/images/AddPlaylist.png" alt="Plalist-image"></img></a> </li>
+				</ul>
 			</div>
 		</section>
-			
+<!--------------------------------------------------------------------------------------------------------------------------------->
 		<section class="musicGenre-container">
 			<h2 class="sections-text" id="MusicGenre">Музыкальные жанры</h2>
 			<div class="description-text">
 				Выберите жанр музыки, который интересен вам в данный момент. 
 			</div>
 			<div>
-			<!-- Кнопки для выбора музыкального жанра -->
+				<!-- Кнопки для выбора музыкального жанра -->
+				<ul>
+					<li class="li-buttom"> <a href="#"><img class="image-add-playlist" src="assets/images/RockGenre.png" alt="Plalist-image"></img></a> </li>
+					<li class="li-buttom"> <a href="#"><img class="image-add-playlist" src="assets/images/HipHopGenre.png" alt="Plalist-image"></img></a> </li>
+					<li class="li-buttom"> <a href="#"><img class="image-add-playlist" src="assets/images/ElectronicGenre.png" alt="Plalist-image"></img></a> </li>
+					<li class="li-buttom"> <a href="#"><img class="image-add-playlist" src="assets/images/FolkGenre.png" alt="Plalist-image"></img></a> </li>
+					<li class="li-buttom"> <a href="#"><img class="image-add-playlist" src="assets/images/PopGenre.png" alt="Plalist-image"></img></a> </li>
+					<li class="li-buttom"> <a href="#"><img class="image-add-playlist" src="assets/images/ClassicGenre.png" alt="Plalist-image"></img></a> </li>
+				</ul>
 			</div>
 		</section>
+<!--------------------------------------------------------------------------------------------------------------------------------->
 		<section class="music-artists-container">
 			<h2 class="sections-text" id="MusicArtists">Исполнители</h2>
 			<div class="description-text">
@@ -75,16 +93,17 @@
     			</ul>
 			</div>
 		</section>
+<!--------------------------------------------------------------------------------------------------------------------------------->
 	</main>
-
+<!--------------------------------------------------------------------------------------------------------------------------------->
 	<footer id="footer-flex">
 		<nav class="footer-nav">
 			<p class="footer-title-text">Навигация</p>
-			<ul class="footer-nav-text" type="circle">
-				<li><a href="#CreatePlaylist">Создать плейлист</a></li>
-				<li><a href="#MusicGenre">Музыкальные жанры</a></li>
-				<li><a href="#MusicArtists">Исполнители</a></li>
-				<li><a href="#Feedback">Обратная связь</a></li>
+			<ul class="footer-text" type="circle">
+				<li><a class="footer-nav-text" href="#CreatePlaylist">Создать плейлист</a></li>
+				<li><a class="footer-nav-text" href="#MusicGenre">Музыкальные жанры</a></li>
+				<li><a class="footer-nav-text" href="#MusicArtists">Исполнители</a></li>
+				<li><a class="footer-nav-text" href="#Feedback">Обратная связь</a></li>
 			</ul>
 		</nav>
 		<div>
@@ -109,8 +128,9 @@
 			</div>
 		</a>
 	</footer>
-
-	<section>
+<!--------------------------------------------------------------------------------------------------------------------------------->
+	<section class="bottom-player" position="bottom" sectionfixed="true">
 	</section>
+<!--------------------------------------------------------------------------------------------------------------------------------->
 </body>
 </html>

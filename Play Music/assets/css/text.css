@@ -1,27 +1,69 @@
+#div-music-player-name {
+	line-height: 150px;
+	font-family: 'Lobster', cursive;
+	color: #faf7f8;
+	font-size: 100px;
+}
+
+.auth-text {
+ 	font-family: 'Lobster', cursive;
+	font-size: 40px;
+	color: #FF5440;
+	margin-bottom: 2%; 
+}
+
+.div-help-text {
+	width: 26%;
+}
+
+.navigation-ref {
+	font-family: cursive;
+	font-size: 25px;
+	color: #f0f5f0;
+	margin-left: 2%;
+	margin-right: 2%; 
+}
+
+.navigation-ref:hover {
+	color: #ffa8cc;
+}
+
+.div-music-artists-list {
+	padding-top: 1%;
+	padding-left: 4%;
+	font-family: cursive;
+	font-size: 20px;
+	font-style: italic;
+}
+
 .description-text {
 	padding-top: 0.5%;
-	font-family: "Comic Sans MS", cursive, sans-serif;
+	font-family: cursive;
 	font-size: 20px;
 }
 
 .sections-text {
-	font-family: "Comic Sans MS", cursive, sans-serif;
+	font-family: 'Lobster', cursive;
 	font-size: 33px;
 	color: #f55e18;
 }
 
 .footer-title-text {
 	padding-top: 0.5%;
-	font-family: "Comic Sans MS", cursive, sans-serif;
+	font-family: cursive;
 	font-size: 25px;
 }
 
 .footer-text {
-	font-family: "Comic Sans MS", cursive, sans-serif;
+	font-family: cursive;
 	font-size: 15px;
 }
 
 .footer-nav-text {
-	font-family: "Comic Sans MS", cursive, sans-serif;
+	font-family: cursive;
 	font-size: 15px;
+}
+
+.footer-nav-text:hover {
+	color: #FE5340;
 }

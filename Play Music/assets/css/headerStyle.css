@@ -17,13 +17,6 @@
 	width: 140px
 }
 
-#div-music-player-name {
-	line-height: 150px;
-	font-family: Mistral;
-	color: #faf7f8;
-	font-size: 100px;
-}
-
 #block-auth {
 	display: flex;
 	justify-content: center;

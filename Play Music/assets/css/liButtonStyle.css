@@ -1,0 +1,29 @@
+.div-playlist {
+	display: flex;
+	align-items: center;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	padding-left: 3%; 
+}
+
+.li-buttom {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	height: 230px;
+	width: 230px;
+	margin-top: 2%;
+	margin-left: 1%;  
+	list-style-type: none;
+	border-radius: 30%;
+	border: 10px solid #000000;
+}
+
+.li-buttom:hover {
+	border-color: #3b193d;
+}
+
+.image-add-playlist {
+	height: 230px;
+	width: 230px;	
+}

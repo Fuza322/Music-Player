@@ -31,19 +31,6 @@
 	background-color: #FE5340; 
 }
 
-.navigation-ref {
-	font-family: "Comic Sans MS", cursive, sans-serif;
-	font-size: 25px;
-	color: #f0f5f0;
-	margin-left: 2%;
-	margin-right: 2%; 
-}
-
-.navigation-ref:hover {
-	color: #ffa8cc;
-	text-decoration: underline;
-}
-
 .playlist-container {
 	margin-top: 4%; 
 	padding: 1%;
@@ -90,12 +77,4 @@
 	border-radius: 15px;
 	width: 80%;
 	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-}
-
-.div-music-artists-list {
-	padding-top: 1%;
-	padding-left: 4%;
-	font-family: "Comic Sans MS", cursive, sans-serif;
-	font-size: 20px;
-	font-style: italic;
 }
