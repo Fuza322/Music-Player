@@ -12,17 +12,13 @@
 	margin-bottom: 2%; 
 }
 
-.div-help-text {
-	font-family: 'Varela Round', sans-serif;
-	width: 26%;
-}
-
 .navigation-ref {
 	font-family: 'Varela Round', sans-serif;
 	font-size: 25px;
 	color: #f0f5f0;
 	margin-left: 2%;
-	margin-right: 2%; 
+	margin-right: 2%;
+	text-align: center;
 }
 
 .navigation-ref:hover {
@@ -48,14 +44,16 @@
 
 .sections-text {
 	font-family: 'Lobster', cursive;
-	font-size: 33px;
 	color: #f55e18;
+	width: 100%;
+	font-size: 33px;
 }
 
 .description-text {
 	padding-top: 0.5%;
 	font-family: 'Varela Round', sans-serif;
 	font-size: 20px;
+	width: 100%;
 }
 
 .footer-title-text {

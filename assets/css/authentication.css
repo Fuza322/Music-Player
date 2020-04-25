@@ -20,7 +20,8 @@ form input {
 	font-size: 18px;
   	font-family: 'Varela Round', sans-serif;
 	padding: 5px;
-	margin: 10px 0;
+	margin-top: 10px;
+	margin-bottom: 10px; 
 	outline-color: #f55e18;
 }
 
@@ -28,4 +29,15 @@ form input {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+.div-help-text {
+	font-family: 'Varela Round', sans-serif;
+}
+
+.div-flex-auth {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 }

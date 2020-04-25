@@ -14,13 +14,12 @@
 
 #logo-size-header {
 	height: 140px;
-	width: 140px
+	width: 140px;
 }
 
 #block-auth {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-left: 30%;
     padding-right: auto;
 }
