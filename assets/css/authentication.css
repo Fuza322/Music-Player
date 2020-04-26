@@ -21,8 +21,20 @@ form input {
   	font-family: 'Varela Round', sans-serif;
 	padding: 5px;
 	margin-top: 10px;
-	margin-bottom: 10px; 
-	outline-color: #f55e18;
+	margin-bottom: 10px;
+	border: 3px solid #3b193d;
+	border-radius: 15px;
+	outline: none;
+	transition: 0.4s;
+}
+
+form input:hover {
+	box-shadow: 0 1px 30px rgba(0,0,0,0.25), 0 1px 30px rgba(0,0,0,0.22);
+}
+
+form input:focus {
+	border: 3px solid #f55e18;
+	box-shadow: 0 1px 30px rgba(0,0,0,0.25), 0 1px 30px rgba(0,0,0,0.22);
 }
 
 .div-button-auth {
@@ -33,6 +45,7 @@ form input {
 
 .div-help-text {
 	font-family: 'Varela Round', sans-serif;
+	font-size: 17px;
 }
 
 .div-flex-auth {

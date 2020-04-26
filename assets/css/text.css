@@ -19,10 +19,29 @@
 	margin-left: 2%;
 	margin-right: 2%;
 	text-align: center;
+	transition: 0.4s;
 }
 
 .navigation-ref:hover {
 	color: #ffa8cc;
+}
+
+.div-created-plalist {
+	height: 100%;
+	width: 100%:;
+}
+
+.rev-created-plalist {
+	display: block;
+}
+
+.created-playlist-text {
+	line-height: 230px;
+	width: 230px;
+	font-family: 'Varela Round', sans-serif;
+	font-size: 25px;
+	text-align: center;
+	color: black;
 }
 
 .div-music-artists-list {
@@ -36,6 +55,7 @@
 	padding-top: 1%;
 	font-family: 'Varela Round', sans-serif;
 	font-size: 20px;
+	transition: 0.4s;
 }
 
 .music-artists-ref:hover {
@@ -70,6 +90,7 @@
 .footer-nav-text {
 	font-family: 'Varela Round', sans-serif;
 	font-size: 19px;
+	transition: 0.4s;
 }
 
 .footer-nav-text:hover {
