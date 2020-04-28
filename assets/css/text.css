@@ -12,6 +12,11 @@
 	margin-bottom: 2%; 
 }
 
+.div-help-auth-text {
+	font-family: 'Varela Round', sans-serif;
+	font-size: 17px;
+}
+
 .navigation-ref {
 	font-family: 'Varela Round', sans-serif;
 	font-size: 25px;
