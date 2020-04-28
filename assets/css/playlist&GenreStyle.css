@@ -1,21 +1,27 @@
-.div-playlist {
+.playlist-container,
+.musicGenre-container {
+	margin-top: 4%; 
+	padding: 1%;
 	display: flex;
-	align-items: center;
-	margin-top: 2%;
-	margin-bottom: 2%;
+	flex-direction: column;
+	min-height: 50vh;
+	background-color: #f0f5f0;
+	border-radius: 15px;
+	width: 80%;
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
-.div-li-button {	
+.div-li-buttons {	
 	margin: 2%;
 }
-.box-items{
+
+.box-items {
 	display: flex;		
 	flex-wrap: wrap;
 	height: 520px;
 	width: 820px;
 	margin-left: auto;
 	margin-right: auto;
-
 }
 
 .li-buttom {
@@ -36,7 +42,8 @@
 	box-shadow: 0 10px 20px rgba(0,0,0,0.25), 0 15px 20px rgba(0,0,0,0.22);
 }
 
-.image-add-playlist {
+.size-image-add-playlist,
+.size-image-genre {
 	height: 230px;
 	width: 230px;	
 }

@@ -9,33 +9,34 @@
 	<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="assets/css/basicElements.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/headerStyle.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/button.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/sectionsСontainer.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/liButtonStyle.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/text.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/headerStyle.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/mainPageContainer.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/mainNavigation.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/playlist&GenreStyle.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/musicArtists.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/footerStyle.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/bottomPlayer.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/fixedMusicPlayer.css">
 </head>
 <body>
-	<header class="header-flex">
+<!----------->
+	<header class="header-div-flex">
 		<a href="index.html">
 			<div id="logo-div-flex">
 				<img id="logo-size-header" src="assets/images/headerLogo.jpg" alt="Logo">
 				<div id="div-music-player-name">Play Music</div>
 			</div>
 		</a>
-		<div id="block-auth">
+		<div id="block-auth-buttons">
 			<button class="btn-light-red" onclick="window.location.href='authorization.html'">Вход</button>
 			<button class="btn-light-red" onclick="window.location.href='registration.html'">Регистрация</button>
 		</div>
 	</header>
-
 	<main id="main-container">
 <!----------->
-		<nav class="nav-container">
+		<nav class="main-nav-container">
 			<h1 class="sections-text">Главное</h1>
-			<div id="main-navigation">
+			<div id="main-nav-box-items">
 				<a class="navigation-ref" href="#CreatePlaylist">Создать плейлист</a>
 				<a class="navigation-ref" href="#MusicGenre">Музыкальные жанры</a>
 				<a class="navigation-ref" href="#MusicArtists">Исполнители</a>
@@ -49,14 +50,12 @@
 				Слушайте плейлист с подходящей именно для вас музыкой.<br>
 				Можете создать сразу несколько плейлистов, добавляя в них ваши любимые композиции.
 			</p>
-			<div class="div-li-button">
-				<!-- Кнопки для добавления/просмотра плейлиста -->
+			<div class="div-li-buttons">
 				<ul class="box-items">
-					<li class="li-buttom"> <a href="#"><img class="image-add-playlist" src="assets/images/AddPlaylist.png" alt="Plalist-image"></img></a> </li>
-					<li class="li-buttom"> <a href="#"><img class="image-add-playlist" src="assets/images/AddPlaylist.png" alt="Plalist-image"></img></a> </li>
-					<li class="li-buttom"> <a href="#"><img class="image-add-playlist" src="assets/images/AddPlaylist.png" alt="Plalist-image"></img></a> </li>
-					<li class="li-buttom"> <a href="#"><img class="image-add-playlist" src="assets/images/AddPlaylist.png" alt="Plalist-image"></img></a> </li>
-					<li class="li-buttom"> <a href="#"><img class="image-add-playlist" src="assets/images/AddPlaylist.png" alt="Plalist-image"></img></a> </li>
+					<li class="li-buttom"> <a href="#"><img class="size-image-add-playlist" src="assets/images/AddPlaylist.png" alt="Plalist-image"></img></a> </li>
+					<li class="li-buttom"> <a href="#"><img class="size-image-add-playlist" src="assets/images/AddPlaylist.png" alt="Plalist-image"></img></a> </li>
+					<li class="li-buttom"> <a href="#"><img class="size-image-add-playlist" src="assets/images/AddPlaylist.png" alt="Plalist-image"></img></a> </li>
+					<li class="li-buttom"> <a href="#"><img class="size-image-add-playlist" src="assets/images/AddPlaylist.png" alt="Plalist-image"></img></a> </li>
 				</ul>
 			</div>
 		</section>
@@ -66,15 +65,14 @@
 			<p class="description-text">
 				Выберите жанр музыки, который интересен вам в данный момент. 
 			</p>
-			<div class="div-li-button">
-				<!-- Кнопки для выбора музыкального жанра -->
+			<div class="div-li-buttons">
 				<ul class="box-items">
-					<li class="li-buttom"> <a href="#"><img class="image-add-playlist" src="assets/images/RockGenre.png" alt="Plalist-image"></img></a> </li>
-					<li class="li-buttom"> <a href="#"><img class="image-add-playlist" src="assets/images/HipHopGenre.png" alt="Plalist-image"></img></a> </li>
-					<li class="li-buttom"> <a href="#"><img class="image-add-playlist" src="assets/images/ElectronicGenre.png" alt="Plalist-image"></img></a> </li>
-					<li class="li-buttom"> <a href="#"><img class="image-add-playlist" src="assets/images/FolkGenre.png" alt="Plalist-image"></img></a> </li>
-					<li class="li-buttom"> <a href="#"><img class="image-add-playlist" src="assets/images/PopGenre.png" alt="Plalist-image"></img></a> </li>
-					<li class="li-buttom"> <a href="#"><img class="image-add-playlist" src="assets/images/ClassicGenre.png" alt="Plalist-image"></img></a> </li>
+					<li class="li-buttom"> <a href="#"><img class="size-image-genre" src="assets/images/RockGenre.png" alt="Plalist-image"></img></a> </li>
+					<li class="li-buttom"> <a href="#"><img class="size-image-genre" src="assets/images/HipHopGenre.png" alt="Plalist-image"></img></a> </li>
+					<li class="li-buttom"> <a href="#"><img class="size-image-genre" src="assets/images/ElectronicGenre.png" alt="Plalist-image"></img></a> </li>
+					<li class="li-buttom"> <a href="#"><img class="size-image-genre" src="assets/images/FolkGenre.png" alt="Plalist-image"></img></a> </li>
+					<li class="li-buttom"> <a href="#"><img class="size-image-genre" src="assets/images/PopGenre.png" alt="Plalist-image"></img></a> </li>
+					<li class="li-buttom"> <a href="#"><img class="size-image-genre" src="assets/images/ClassicGenre.png" alt="Plalist-image"></img></a> </li>
 				</ul>
 			</div>
 		</section>
@@ -98,13 +96,12 @@
     			</ul>
 			</div>
 		</section>
-<!----------->
 	</main>
 <!----------->
 	<footer id="footer-flex">
 		<nav class="footer-nav">
 			<p class="footer-title-text">Навигация</p>
-			<ul class="footer-text" type="circle">
+			<ul class="ul-footer-text" type="circle">
 				<li><a class="footer-nav-text" href="#CreatePlaylist">Создать плейлист</a></li>
 				<li><a class="footer-nav-text" href="#MusicGenre">Музыкальные жанры</a></li>
 				<li><a class="footer-nav-text" href="#MusicArtists">Исполнители</a></li>
@@ -129,12 +126,12 @@
 		</div>
 		<a href="index.html">
 			<div>
-				<img id="logo-size-header" src="assets/images/footerLogo.jpg" alt="Logo">
+				<img id="logo-size-footer" src="assets/images/footerLogo.jpg" alt="Logo">
 			</div>
 		</a>
 	</footer>
 <!----------->
-	<section class="bottom-player" position="bottom" sectionfixed="true">
+	<section class="fixed-music-player-container" position="bottom" sectionfixed="true">
 		Здесь будет фиксированный section, в котором будет распологать плеер с текущей проигрываемой композиции (закрывает footer, пофикфу позже с помощью JS)
 	</section>
 <!----------->

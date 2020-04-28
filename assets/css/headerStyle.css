@@ -1,4 +1,4 @@
-.header-flex {
+.header-div-flex {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
@@ -17,7 +17,14 @@
 	width: 140px;
 }
 
-#block-auth {
+#div-music-player-name {
+	line-height: 150px;
+	font-family: 'Lobster', cursive;
+	color: #faf7f8;
+	font-size: 100px;
+}
+
+#block-auth-buttons {
 	display: flex;
 	justify-content: center;
 	align-items: center;

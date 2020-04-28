@@ -49,3 +49,15 @@ form input:focus {
 	align-items: center;
 	flex-direction: column;
 }
+
+.auth-text {
+ 	font-family: 'Lobster', cursive;
+	font-size: 40px;
+	color: #f55e18;
+	margin-bottom: 2%; 
+}
+
+.div-help-auth-text {
+	font-family: 'Varela Round', sans-serif;
+	font-size: 17px;
+}

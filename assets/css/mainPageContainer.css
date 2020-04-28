@@ -1,0 +1,22 @@
+#main-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	margin-top: 5%;
+	margin-bottom: 7%;
+}
+
+.sections-text {
+	font-family: 'Lobster', cursive;
+	color: #f55e18;
+	width: 100%;
+	font-size: 33px;
+}
+
+.description-text {
+	padding-top: 0.5%;
+	font-family: 'Varela Round', sans-serif;
+	font-size: 20px;
+	width: 100%;
+}

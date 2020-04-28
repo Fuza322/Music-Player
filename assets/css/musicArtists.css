@@ -1,0 +1,29 @@
+.music-artists-container {
+	margin-top: 4%; 
+	padding: 1%;
+	display: flex;
+	flex-direction: column;
+	min-height: 30vh;
+	background-color: #f0f5f0;
+	border-radius: 15px;
+	width: 80%;
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.div-music-artists-list {
+	padding-top: 1%;
+	padding-left: 4%;
+	font-family: 'Varela Round', sans-serif;
+	font-size: 20px;
+}
+
+.music-artists-ref {
+	padding-top: 1%;
+	font-family: 'Varela Round', sans-serif;
+	font-size: 20px;
+	transition: 0.4s;
+}
+
+.music-artists-ref:hover {
+	color: #FE5340;
+}
