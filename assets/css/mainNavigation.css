@@ -65,7 +65,7 @@
 	}
 }
 
-@media all and (min-width: 1560px)
+@media screen and (min-width: 1560px)
 {
 	.navigation-ref {
 	font-family: 'Varela Round', sans-serif;

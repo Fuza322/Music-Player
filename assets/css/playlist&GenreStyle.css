@@ -85,7 +85,7 @@
 	}
 }
 
-@media all and (min-width: 1560px)
+@media screen and (min-width: 1560px)
 {
  .box-items {
 	display: flex;		
