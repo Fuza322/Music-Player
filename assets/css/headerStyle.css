@@ -31,8 +31,6 @@
     padding-right: auto;
 }
 
-
-/*-------------------------*/
 .header-ref-button {
 	color: #000 !important;
 	text-decoration: none
@@ -40,7 +38,7 @@
 
 
 .div-header-buttons {
-  margin: 30px 30px;
+  margin: 15px 15px;
   padding: 15px 20px;
   border-radius: 10px;
   border: 4px solid;
@@ -63,15 +61,3 @@
 	background-size: 100% 100%;
 	color: #27323A;
 }
-
-/*.btn-light-red {
-  color: #FAF7F8;
-  border-color: #FF5E4E;
-  background: -webkit-linear-gradient(left, #FF5E4E, #FF5E4E) no-repeat;
-  background: linear-gradient(to right, #FF5E4E, #FF5E4E) no-repeat;
-  background-size: 0% 100%;
-}
-.btn-light-red:hover {
-  background-size: 100% 100%;
-  color: #27323A;
-}*/
