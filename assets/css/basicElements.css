@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+	background: #3b193d;
+	width: 100%;
+	height: 10%;
+}
+
+a { 
+	text-decoration: none;
+} 
+
+body {
+	width: 100%;
+	background-color: #E0CAB2;
+}
+
+
+footer {
+	height: 10%;
+	width: 100%;
+	background-color: #65bcbf;
+}
