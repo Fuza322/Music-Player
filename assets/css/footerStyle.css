@@ -2,7 +2,9 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	padding-top: 1%;
+	align-items: center;
+	bottom: 0;
+    left: 0;
 	border-top: 6px solid silver;
 }
 
@@ -11,20 +13,19 @@
 }
 
 .footer-title-text {
-	padding-top: 1%;
 	font-family: 'Varela Round', sans-serif;
-	font-size: 25px;
+	font-size: 23px;
 }
 
 .ul-footer-text,
 .footer-text {
 	font-family: 'Varela Round', sans-serif;
-	font-size: 18px;
+	font-size: 16px;
 }
 
 .footer-nav-text {
 	font-family: 'Varela Round', sans-serif;
-	font-size: 19px;
+	font-size: 17px;
 	transition: 0.4s;
 }
 
@@ -48,3 +49,15 @@
 	width: 150px;
 }
 
+/*
+
+@@@@@@@@@@@@@@@@ MEDIA QUERIES @@@@@@@@@@@@@@@@
+
+*/
+
+@media only screen and (max-width: 980px)
+{
+	#hide-logo-footer {
+		display: none;
+	}
+}

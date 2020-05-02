@@ -1,25 +1,26 @@
 .playlist-container,
 .musicGenre-container {
+	height: auto;
 	margin-top: 4%; 
 	padding: 1%;
 	display: flex;
 	flex-direction: column;
-	min-height: 50vh;
 	background-color: #f0f5f0;
 	border-radius: 15px;
 	width: 80%;
 	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
-.div-li-buttons {	
+.div-li-buttons {
+	height: auto;
 	margin: 2%;
 }
 
 .box-items {
 	display: flex;		
 	flex-wrap: wrap;
-	height: 520px;
-	width: 820px;
+	height: auto;
+	width: 80%;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -46,4 +47,53 @@
 .size-image-genre {
 	height: 230px;
 	width: 230px;	
+}
+
+/*
+
+@@@@@@@@@@@@@@@@ MEDIA QUERIES @@@@@@@@@@@@@@@@
+
+*/
+
+@media only screen and (max-width: 980px)
+{
+	.box-items {
+		display: flex;		
+		flex-wrap: wrap;
+		height: auto;
+		width: 690px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.li-buttom {
+		margin-left: 10px;
+		margin-right: 10px;
+		margin-bottom: 10px;
+		height: 300px;
+		width: 300px;
+		list-style-type: none;
+		border-radius: 30%;
+		border: 10px solid #3b193d; 
+		box-shadow: 0 8px 8px rgba(0,0,0,0.25), 0 8px 8px rgba(0,0,0,0.22);
+		transition: 0.4s;
+	}
+
+	.size-image-add-playlist,
+	.size-image-genre {
+		height: 300px;
+		width: 300px;	
+	}
+}
+
+@media screen and (min-width: 1560px)
+{
+	.box-items {
+		display: flex;		
+		flex-wrap: wrap;
+		height: auto;
+		width: 80%;
+		margin-left: 14%;
+		margin-right: auto;
+	}
 }

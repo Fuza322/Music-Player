@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-	<title>Play Music</title>
+	<title>Play Music - Главная</title>
 	<meta charset="utf-8">
 	<meta name="author" content="Osipik Ivan">
 	<meta name="description" content="Play Music - это универсальный музыкальныйы плеер, позволяющий вам слушать песни любимых исполнителей и жанров, а также создать свой собственный плейлист.">
@@ -28,6 +28,7 @@
 			</div>
 		</a>
 		<div id="block-auth-buttons">
+			<a href="#"><div class="div-header-logout-button"><img class="logout-button-img-size" src="assets/images/logout.png" alt="logout"></div></a>
 			<a class="header-ref-button" href="authorization.html"><div class="div-header-buttons"><p>Вход</p></div></a>
 			<a class="header-ref-button" href="registration.html"><div class="div-header-buttons"><p>Регистрация</p></div></a>
 		</div>
@@ -52,6 +53,9 @@
 			</p>
 			<div class="div-li-buttons">
 				<ul class="box-items">
+					<li class="li-buttom"> <a href="#"><img class="size-image-add-playlist" src="assets/images/AddPlaylist.png" alt="Plalist-image"></img></a> </li>
+					<li class="li-buttom"> <a href="#"><img class="size-image-add-playlist" src="assets/images/AddPlaylist.png" alt="Plalist-image"></img></a> </li>
+					<li class="li-buttom"> <a href="#"><img class="size-image-add-playlist" src="assets/images/AddPlaylist.png" alt="Plalist-image"></img></a> </li>
 					<li class="li-buttom"> <a href="#"><img class="size-image-add-playlist" src="assets/images/AddPlaylist.png" alt="Plalist-image"></img></a> </li>
 					<li class="li-buttom"> <a href="#"><img class="size-image-add-playlist" src="assets/images/AddPlaylist.png" alt="Plalist-image"></img></a> </li>
 					<li class="li-buttom"> <a href="#"><img class="size-image-add-playlist" src="assets/images/AddPlaylist.png" alt="Plalist-image"></img></a> </li>
@@ -83,16 +87,17 @@
 				Слушайте композиции ваших любимых исполнителей. 
 			</div>
 			<div class="div-music-artists-list">
-				<ul type="circle">
-        			<li><a class="music-artists-ref" href="#">Metallica</a></li>
+				<ul class="box-items-artists" type="circle">
         			<li><a class="music-artists-ref" href="#">Слот</a></li>
-        			<li><a class="music-artists-ref" href="#">Наутилус Помпилиус</a></li>
-        			<li><a class="music-artists-ref" href="#">Eminem</a></li>
-        			<li><a class="music-artists-ref" href="#">Ляпис Трубецкой</a></li>
-        			<li><a class="music-artists-ref" href="#">Artic Monkeys</a></li>
+        			<li><a class="music-artists-ref" href="#">Arctic Monkeys</a></li>
         			<li><a class="music-artists-ref" href="#">Noize MC</a></li>
-        			<li><a class="music-artists-ref" href="#">Boney M.</a></li>
+        			<li><a class="music-artists-ref" href="#">Eminem</a></li>
+        			<li><a class="music-artists-ref" href="#">Draft Punk</a></li>
+        			<li><a class="music-artists-ref" href="#">Prodigy</a></li>
+        			<li><a class="music-artists-ref" href="#">Мельница</a></li>
+        			<li><a class="music-artists-ref" href="#">Fiddler's Green</a></li>
         			<li><a class="music-artists-ref" href="#">Adele</a></li>
+        			<li><a class="music-artists-ref" href="#">Dana Sokolova</a></li>
     			</ul>
 			</div>
 		</section>
@@ -124,16 +129,16 @@
 				<p class="footer-text"><a href="tel:+375291391582">+375 (29)-139-15-82</a></p>
 			</div>
 		</div>
-		<a href="index.html">
+		<a id="hide-logo-footer" href="index.html">
 			<div>
 				<img id="logo-size-footer" src="assets/images/footerLogo.jpg" alt="Logo">
 			</div>
 		</a>
 	</footer>
 <!----------->
-	<section class="fixed-music-player-container">
+	<!-- <section class="fixed-music-player-container">
 		Здесь будет фиксированный section, в котором будет распологать плеер с текущей проигрываемой композиции (закрывает footer, пофикфу позже с помощью JS)
-	</section>
+	</section> -->
 <!----------->
 </body>
 </html>
