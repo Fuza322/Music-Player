@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-	<title>Play Music - Главная</title>
+	<title>Play Music - Создать плейлист</title>
 	<meta charset="utf-8">
 	<meta name="author" content="Osipik Ivan">
 	<meta name="description" content="Play Music - это универсальный музыкальныйы плеер, позволяющий вам слушать песни любимых исполнителей и жанров, а также создать свой собственный плейлист.">
@@ -13,8 +13,7 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/headerStyle.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/mainPageContainer.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/mainNavigation.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/playlist&GenreStyle.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/musicArtists.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/CreatePlaylist.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/footerStyle.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/fixedMusicPlayer.css">
 </head>
@@ -45,58 +44,20 @@
 			</div>
 		</nav>
 <!----------->
-		<section class="playlist-container">
-			<h2 class="sections-text" id="CreatePlaylist">Создать плейлист</h2>
-			<p class="description-text">
-				Слушайте плейлист с подходящей именно для вас музыкой.<br>
-				Можете создать сразу несколько плейлистов, добавляя в них ваши любимые композиции.
-			</p>
-			<div class="div-li-buttons">
-				<ul class="box-items">
-					<li class="li-buttom"> <a href="createPlaylist.html"><img class="size-image-add-playlist" src="assets/images/AddPlaylist.png" alt="AddPlaylistImage"></img></a> </li>
-				</ul>
-			</div>
+		<section class="create-playlist-container">
+			<div class="div-create-playlist">
+				<h2 class="sections-text" id="MusicGenre">Создание плейлиста:</h2>
+				<div class="div-create-playlist-info">
+					<div class="div-create-playlist-img"><img class="add-playlist-image" src="assets/images/AddPlaylist.png" alt="AddPlaylistImage"></div>
+					<p class="help-text-playlist-name">Введите название плейлиста:</p>
+                	<input class="input-playlist-name" type="text" placeholder="Введите название плейлиста">
+                </div>
+            <div class="div-song-list">
+            	<!-- Список песен в виде плееров -->
+            </div>
+            <button class="btn-create-playlist" onclick="window.location.href='#'">Создать</button>
 		</section>
 <!----------->
-		<section class="musicGenre-container">
-			<h2 class="sections-text" id="MusicGenre">Музыкальные жанры</h2>
-			<p class="description-text">
-				Выберите жанр музыки, который интересен вам в данный момент. 
-			</p>
-			<div class="div-li-buttons">
-				<ul class="box-items">
-					<li class="li-buttom"> <a href="#"><img class="size-image-genre" src="assets/images/musicGenresMainPage/RockGenreText.png" alt="RockGenreImage"></img></a> </li>
-					<li class="li-buttom"> <a href="#"><img class="size-image-genre" src="assets/images/musicGenresMainPage/HipHopGenreText.png" alt="HipHopGenreImage"></img></a> </li>
-					<li class="li-buttom"> <a href="#"><img class="size-image-genre" src="assets/images/musicGenresMainPage/ElectronicGenreText.png" alt="ElectronicGenreImage"></img></a> </li>
-					<li class="li-buttom"> <a href="#"><img class="size-image-genre" src="assets/images/musicGenresMainPage/FolkGenreText.png" alt="FolkGenreImage"></img></a> </li>
-					<li class="li-buttom"> <a href="#"><img class="size-image-genre" src="assets/images/musicGenresMainPage/PopGenreText.png" alt="PopGenreImage"></img></a> </li>
-					<li class="li-buttom"> <a href="#"><img class="size-image-genre" src="assets/images/musicGenresMainPage/ClassicGenreText.png" alt="ClassicGenreImage"></img></a> </li>
-				</ul>
-			</div>
-		</section>
-<!----------->
-		<section class="music-artists-container">
-			<h2 class="sections-text" id="MusicArtists">Исполнители</h2>
-			<div class="description-text">
-				Слушайте композиции ваших любимых исполнителей. 
-			</div>
-			<div class="div-music-artists-list">
-				<ul class="box-items-artists" type="circle">
-        			<li><a class="music-artists-ref" href="#">Слот</a></li>
-        			<li><a class="music-artists-ref" href="#">Arctic Monkeys</a></li>
-        			<li><a class="music-artists-ref" href="#">Noize MC</a></li>
-        			<li><a class="music-artists-ref" href="#">Eminem</a></li>
-        			<li><a class="music-artists-ref" href="#">Draft Punk</a></li>
-        			<li><a class="music-artists-ref" href="#">Prodigy</a></li>
-        			<li><a class="music-artists-ref" href="#">Мельница</a></li>
-        			<li><a class="music-artists-ref" href="#">Fiddler's Green</a></li>
-        			<li><a class="music-artists-ref" href="#">Adele</a></li>
-        			<li><a class="music-artists-ref" href="#">Dana Sokolova</a></li>
-    			</ul>
-			</div>
-			<div>
-			<div>
-		</section>
 	</main>
 <!----------->
 	<footer id="footer-flex">
