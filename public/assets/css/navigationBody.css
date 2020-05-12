@@ -1,0 +1,101 @@
+.main-nav-container {
+	padding: 1%;
+	display: flex;
+	flex-direction: column;
+	height: 150px;
+	background-color: #f0f5f0;
+	border-radius: 15px;
+	width: 80%;
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+#main-nav-box-items {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1%;
+	margin-top: 1%;
+	margin-left: 3%;
+	margin-right: 3%;
+	border: 5px solid #3B193D;
+	border-radius: 30px;
+	background-color: #FE5340;
+	box-shadow: 0 4px 4px rgba(0,0,0,0.25), 0 4px 4px rgba(0,0,0,0.22);
+}
+
+.navigation-ref {
+	font-family: 'Varela Round', sans-serif;
+	font-size: 25px;
+	color: #f0f5f0;
+	margin-left: 2%;
+	margin-right: 2%;
+	text-align: center;
+	transition: 0.4s;
+}
+
+.navigation-ref:hover {
+	color: #ffa8cc;
+}
+
+/*
+
+@@@@@@@@@@@@@@@@ MEDIA QUERIES @@@@@@@@@@@@@@@@
+
+*/
+@media only screen and (max-width: 375px)
+{
+	.main-nav-container {
+		padding: 1%;
+		display: flex;
+		flex-direction: column;
+		height: 78px;
+		background-color: #f0f5f0;
+		border-radius: 15px;
+		width: 80%;
+		box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+	}
+
+	#main-nav-box-items {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border: 3px solid #3B193D;
+		border-radius: 30px;
+		background-color: #FE5340;
+		box-shadow: 0 4px 4px rgba(0,0,0,0.25), 0 4px 4px rgba(0,0,0,0.22);
+	}
+
+	.navigation-ref {
+		font-family: 'Varela Round', sans-serif;
+		font-size: 10px;
+		color: #f0f5f0;
+		margin-left: 2%;
+		margin-right: 2%;
+		text-align: center;
+		transition: 0.4s;
+	}
+}
+
+@media screen and (min-width: 640px) and (max-width: 650px)
+{
+	.main-nav-container {
+		padding: 1%;
+		display: flex;
+		flex-direction: column;
+		height: 125px;
+		background-color: #f0f5f0;
+		border-radius: 15px;
+		width: 80%;
+		box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+	}
+
+	.navigation-ref {
+		font-family: 'Varela Round', sans-serif;
+		font-size: 15px;
+		color: #f0f5f0;
+		margin-left: 2%;
+		margin-right: 2%;
+		text-align: center;
+		transition: 0.4s;
+	}
+}

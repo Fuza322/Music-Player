@@ -1,0 +1,200 @@
+/* ######################## CreatePlaylist and Genrelist styles ######################## */
+
+.playlist-container,
+.musicGenre-container {
+	height: auto;
+	margin-top: 4%;
+	padding: 1%;
+	display: flex;
+	flex-direction: column;
+	background-color: #f0f5f0;
+	border-radius: 15px;
+	width: 80%;
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.div-li-buttons {
+	height: auto;
+	margin: 2%;
+}
+
+.box-items {
+	display: flex;
+	flex-wrap: wrap;
+	height: auto;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.li-buttom {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	height: 230px;
+	width: 230px;
+	list-style-type: none;
+	border-radius: 30%;
+	border: 10px solid #3b193d;
+	box-shadow: 0 8px 8px rgba(0,0,0,0.25), 0 8px 8px rgba(0,0,0,0.22);
+	transition: 0.4s;
+}
+
+.li-buttom:hover {
+	border-color: #f55e18;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.25), 0 15px 20px rgba(0,0,0,0.22);
+}
+
+.size-image-add-playlist,
+.size-image-genre {
+	max-height: 100%;
+	max-width: 100%;
+}
+
+.playlist-name {
+	display: block;
+	text-align: center;
+	margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+	font-family: 'Varela Round', sans-serif;
+	font-size: 30px;
+}
+
+/* ######################## Artists list styles ######################## */
+
+.music-artists-container {
+	height: auto;
+	width: 80%;
+	margin-top: 4%;
+	margin-bottom: 7%;
+	padding: 1%;
+	display: flex;
+	flex-direction: column;
+	background-color: #f0f5f0;
+	border-radius: 15px;
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.div-music-artists-list {
+	height: auto;
+	padding-top: 1%;
+	padding-left: 4%;
+	font-family: 'Varela Round', sans-serif;
+	font-size: 20px;
+}
+
+.box-items-artists {
+	height: auto;
+}
+
+.music-artists-ref {
+	height: auto;
+	padding-top: 1%;
+	font-family: 'Varela Round', sans-serif;
+	font-size: 20px;
+	transition: 0.4s;
+}
+
+.music-artists-ref:hover {
+	color: #FE5340;
+}
+
+/*
+
+@@@@@@@@@@@@@@@@ MEDIA QUERIES @@@@@@@@@@@@@@@@
+
+*/
+
+@media only screen and (max-width: 375px)
+{
+	.box-items {
+		display: flex;
+		flex-wrap: wrap;
+		height: auto;
+		width: 280px;
+		margin-right: auto;
+		margin-left: 4.5%;
+	}
+
+	.li-buttom {
+		overflow: hidden;
+		margin-left: 10px;
+		margin-right: 10px;
+		margin-bottom: 10px;
+		height: 100px;
+		width: 100px;
+		list-style-type: none;
+		border-radius: 30%;
+		border: 3px solid #3b193d;
+		box-shadow: 0 8px 8px rgba(0,0,0,0.25), 0 8px 8px rgba(0,0,0,0.22);
+		transition: 0.4s;
+	}
+
+	.size-image-add-playlist,
+	.size-image-genre {
+		height: 100%;
+		width: 100%;
+	}
+
+	.music-artists-ref {
+		height: auto;
+		font-family: 'Varela Round', sans-serif;
+		font-size: 10px;
+		transition: 0.4s;
+	}
+
+	.box-items-artists {
+		height: auto;
+		margin-left: 5%;
+	}
+}
+
+@media screen and (min-width: 640px) and (max-width: 650px)
+{
+	.box-items {
+		display: flex;
+		flex-wrap: wrap;
+		height: auto;
+		width: 480px;
+		margin-right: auto;
+		margin-left: 4%;
+	}
+
+	.li-buttom {
+		overflow: hidden;
+		margin-left: 10px;
+		margin-right: 10px;
+		margin-bottom: 10px;
+		height: 125px;
+		width: 125px;
+		list-style-type: none;
+		border-radius: 30%;
+		border: 3px solid #3b193d;
+		box-shadow: 0 8px 8px rgba(0,0,0,0.25), 0 8px 8px rgba(0,0,0,0.22);
+		transition: 0.4s;
+	}
+
+	.size-image-add-playlist,
+	.size-image-genre {
+		height: 100%;
+		width: 100%;
+	}
+
+	.music-artists-ref {
+		height: auto;
+		font-family: 'Varela Round', sans-serif;
+		font-size: 15px;
+		transition: 0.4s;
+	}
+
+	.box-items-artists {
+		height: auto;
+		margin-left: 2%;
+	}
+}
