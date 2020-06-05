@@ -1,4 +1,72 @@
-/* ######################## CreatePlaylist and Genrelist styles ######################## */
+.search-all-songs-section-container {
+	height: auto;
+	margin-top: 4%;
+	padding: 1%;
+	display: flex;
+	flex-direction: column;
+	background-color: #f0f5f0;
+	border-radius: 15px;
+	width: 80%;
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.load-new-song-section-container {
+	height: auto;
+	margin-top: 4%;
+	margin-bottom: 6%;
+	padding: 1%;
+	display: flex;
+	flex-direction: column;
+	background-color: #f0f5f0;
+	border-radius: 15px;
+	width: 80%;
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.div-search-all-songs-button,
+.div-load-new-song-button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.search-button,
+.load-button {
+	margin: 30px 30px;
+	padding: 15px 20px;
+	border-radius: 10px;
+	border: 4px solid;
+	font-family: 'Varela Round', sans-serif;
+	font-size: 17px;
+	text-transform: uppercase;
+	background: none;
+	outline: none;
+	cursor: pointer;
+	-webkit-transition: all .5s;
+	transition: all .5s;
+}
+
+
+.btn-search-all-songs-page,
+.btn-load-new-song-page {
+	width: 92%;
+	margin: 30px 10px;
+	color: #FF5440;
+	border-color: #FF5440;
+	background: -webkit-linear-gradient(left, #FF5440, #FF5440) no-repeat;
+	background: linear-gradient(to right, #FF5440, #FF5440) no-repeat;
+	background-size: 0% 100%;
+}
+
+.btn-search-all-songs-page:hover {
+    background-size: 100% 100%;
+    color: #27323A;
+}
+
+.btn-load-new-song-page:hover {
+	background-size: 100% 100%;
+	color: #27323A;
+}
 
 .playlist-container,
 .musicGenre-container {
@@ -14,12 +82,12 @@
 }
 
 .div-li-buttons {
-	height: auto;
 	margin: 2%;
 }
 
 .box-items {
 	display: flex;
+	justify-content: flex-start;
 	flex-wrap: wrap;
 	height: auto;
 	width: 80%;
@@ -53,6 +121,28 @@
 .size-image-genre {
 	max-height: 100%;
 	max-width: 100%;
+}
+
+.div-playlist-name {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 230px;
+	width: 230px;
+}
+
+#error-pic {
+	height: 420px;
+	width: 420px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.section-error {
+	display: flex;
+	flex-direction: column;
+	margin-top: 50px;
+	text-align: center;
 }
 
 .playlist-name {
@@ -113,6 +203,50 @@
 
 @media only screen and (max-width: 375px)
 {
+	.div-search-all-songs-button,
+	.div-load-new-song-button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.search-button,
+	.load-button {
+		margin: 5px;
+		padding: 7px;
+		border-radius: 10px;
+		border: 4px solid;
+		font-family: 'Varela Round', sans-serif;
+		font-size: 10px;
+		text-transform: uppercase;
+		background: none;
+		outline: none;
+		cursor: pointer;
+		-webkit-transition: all .5s;
+		transition: all .5s;
+	}
+
+	.btn-search-all-songs-page,
+	.btn-load-new-song-page {
+		width: 92%;
+		margin: 15px 10px;
+		color: #FF5440;
+		border-color: #FF5440;
+		background: -webkit-linear-gradient(left, #FF5440, #FF5440) no-repeat;
+		background: linear-gradient(to right, #FF5440, #FF5440) no-repeat;
+		background-size: 0% 100%;
+	}
+
+	.btn-search-all-songs-page:hover {
+			background-size: 100% 100%;
+			color: #27323A;
+	}
+
+	.btn-load-new-song-page:hover {
+		background-size: 100% 100%;
+		color: #27323A;
+	}
+
 	.box-items {
 		display: flex;
 		flex-wrap: wrap;
@@ -142,6 +276,25 @@
 		width: 100%;
 	}
 
+	.div-playlist-name {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100px;
+		width: 100px;
+	}
+
+	.playlist-name {
+		display: block;
+		text-align: center;
+		margin-left: auto;
+	  margin-right: auto;
+	  margin-top: auto;
+	  margin-bottom: auto;
+		font-family: 'Varela Round', sans-serif;
+		font-size: 15px;
+	}
+
 	.music-artists-ref {
 		height: auto;
 		font-family: 'Varela Round', sans-serif;
@@ -157,6 +310,50 @@
 
 @media screen and (min-width: 640px) and (max-width: 650px)
 {
+	.div-search-all-songs-button,
+	.div-load-new-song-button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.search-button,
+	.load-button {
+		margin: 30px 30px;
+		padding: 8px 10px;
+		border-radius: 10px;
+		border: 4px solid;
+		font-family: 'Varela Round', sans-serif;
+		font-size: 13px;
+		text-transform: uppercase;
+		background: none;
+		outline: none;
+		cursor: pointer;
+		-webkit-transition: all .5s;
+		transition: all .5s;
+	}
+
+	.btn-search-all-songs-page,
+	.btn-load-new-song-page {
+		width: 92%;
+		margin: 15px 10px;
+		color: #FF5440;
+		border-color: #FF5440;
+		background: -webkit-linear-gradient(left, #FF5440, #FF5440) no-repeat;
+		background: linear-gradient(to right, #FF5440, #FF5440) no-repeat;
+		background-size: 0% 100%;
+	}
+
+	.btn-search-all-songs-page:hover {
+	    background-size: 100% 100%;
+	    color: #27323A;
+	}
+
+	.btn-load-new-song-page:hover {
+		background-size: 100% 100%;
+		color: #27323A;
+	}
+
 	.box-items {
 		display: flex;
 		flex-wrap: wrap;
@@ -184,6 +381,25 @@
 	.size-image-genre {
 		height: 100%;
 		width: 100%;
+	}
+
+	.div-playlist-name {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 125px;
+		width: 125px;
+	}
+
+	.playlist-name {
+		display: block;
+		text-align: center;
+		margin-left: auto;
+	  margin-right: auto;
+	  margin-top: auto;
+	  margin-bottom: auto;
+		font-family: 'Varela Round', sans-serif;
+		font-size: 15px;
 	}
 
 	.music-artists-ref {

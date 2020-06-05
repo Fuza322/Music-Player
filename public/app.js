@@ -8,6 +8,9 @@ import Genre            from './views/pages/Genre.js'
 import Artist           from './views/pages/Artist.js'
 import Playlist         from './views/pages/Playlist.js'
 import PlaylistNew      from './views/pages/PlaylistNew.js'
+import Search           from './views/pages/Search.js' 
+import Upload           from './views/pages/Upload.js'
+import Edit             from './views/pages/Edit.js'
 
 import Header           from './views/components/Header.js'
 import Footer           from './views/components/Footer.js'
@@ -24,25 +27,46 @@ const routes = {
     , '/genres/:id'     : Genre
     , '/artists/:id'    : Artist
     , '/playlists/:id'  : Playlist
-    , '/playlist'       : PlaylistNew
+    , '/edit/:id'       : Edit
+    , '/search'         : Search
+    , '/upload'         : Upload
+    , '/playlistnew'    : PlaylistNew
 };
 
 
 // The router code. Takes a URL, checks against the list of supported routes and then renders the corresponding content page.
 const router = async () => {
-
+    const header = null || document.getElementById('header_container');
+    const content = null || document.getElementById('page_container');
+    const footer = null || document.getElementById('footer_container');
+    header.innerHTML = await Header.render();
+    await Header.after_render();
+    footer.innerHTML = await Footer.render();
+    await Footer.after_render();
+   
+    let request = Utils.parseRequestURL()
+    let parsedURL = (request.resource ? '/' + request.resource : '/') + (request.id ? '/:id' : '') + (request.verb ? '/' + request.verb : '')
+    let page = routes[parsedURL] ? routes[parsedURL] : Error404
+    content.innerHTML = await page.render();
+    const navigation = null || document.getElementById('navbar');
+    if (navigation){
+      navigation.innerHTML = await Navbar.render();
+    }
+    await page.after_render();
+}
+const create = async () => {
     // Lazy load view element:
     const header = null || document.getElementById('header_container');
     const content = null || document.getElementById('page_container');
     const footer = null || document.getElementById('footer_container');
-
+    const player = null || document.getElementById('player_container');
     // Render the Header and footer of the page
     header.innerHTML = await Header.render();
     await Header.after_render();
     footer.innerHTML = await Footer.render();
     await Footer.after_render();
-
-
+    player.innerHTML = await MusicPlayer.render();
+    await MusicPlayer.after_render();
     // Get the parsed URl from the addressbar
     let request = Utils.parseRequestURL()
 
@@ -55,21 +79,15 @@ const router = async () => {
     content.innerHTML = await page.render();
 
     const navigation = null || document.getElementById('navbar');
-    const musicPlayer = null || document.getElementById('musicplayer');
     if (navigation){
       navigation.innerHTML = await Navbar.render();
     }
-    if (musicPlayer){
-      musicPlayer.innerHTML = await MusicPlayer.render();
-    }
-
     await page.after_render();
-    await MusicPlayer.after_render();
-
 }
+
 
 // Listen on hash change:
 window.addEventListener('hashchange', router);
 
 // Listen on page load:
-window.addEventListener('load', router);
+window.addEventListener('load', create);

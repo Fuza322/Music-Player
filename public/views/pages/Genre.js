@@ -1,7 +1,7 @@
-import Utils        from './../../services/Utils.js'
-
+import Utils from './../../services/Utils.js'
+import * as DS from './../../services/DS.js'
 async function getGenre(id){
-  const snapshot = await firebase.database().ref('/genres/' + id).once('value');
+  const snapshot = await firebase.database().ref('/genres/' + id ).once('value');
 
   return snapshot.val();
 }
@@ -30,17 +30,17 @@ let Genre = {
                         <p id='genre-name' class="genre-name"></p>
                       </div>
                   </div>
-                  <div class="div-song-list">
+                  <div class="div-song-list-genre">
+                    <ul class='ul-audio-list-genre' id="audio-list">
+                    </ul>
                   </div>
                    <button class="btn-on-main-page" onclick="window.location.href='/'">На главную</button>
-          </section>
-          <section id='musicplayer' class="fixed-music-player-container">
           </section>
         `
         return view
     },
     after_render: async () => {
-      document.getElementById('page_container').className = 'main-container';
+      
       const request = Utils.parseRequestURL();
       const genrePic = document.getElementById('genre-pic');
       const genre = await getGenre(request.id);
@@ -48,6 +48,49 @@ let Genre = {
 
       const genre_name = document.getElementById('genre-name');
       genre_name.innerText = genre.name;
+
+      async function getAudio(id, list){
+        let snapshot = await firebase.database().ref('/song');
+        snapshot.on("value", async function(snapshot) {
+          console.log(snapshot.val());
+          let songsList = snapshot.val();
+          songsList.forEach(function(itemRef,index){
+            if (itemRef.genre.toLowerCase() == request.id.toLowerCase()){
+              let songLi = document.createElement('LI');
+              songLi.className = 'li-audio-list-genre';
+              //songLi.id = `${itemRef.fullPath}`;
+              songLi.innerHTML = `
+                                    <div class="div-play-audio-image-genre">
+                                        <img id="${index}" class="play-audio-image-genre" src="assets/images/playerImages/playButton.png" alt="Play-audio-button">
+                                    </div>
+                                    <div class="div-audio-name-genre">
+                                      <div>
+                                        <p class="audio-name-genre">${itemRef.name + " - " + itemRef.author}</p>
+                                      </div>
+                                    </div>
+                                 `
+              // songLi.innerText = `${itemRef.name}`;
+              list.appendChild(songLi);
+            }
+          });
+        });
+      }
+
+      const audioList = document.getElementById('audio-list');
+      await getAudio(request.id, audioList);
+
+      audioList.addEventListener("click",async function(e) {
+            console.log(e.target.nodeName);
+            if(e.target && e.target.nodeName == "IMG") {
+                console.log(e.target.id);
+                if (firebase.auth().currentUser){
+                    DS.pushPlaylist(firebase.auth().currentUser.email, [e.target.id]);
+                }else{
+                    alert("Login first.")
+                }
+                //firebase.database().ref('/playlists/' + playlistId + "/song_list/" + e.target.id).remove();
+            }
+        });
     }
 }
 export default Genre;

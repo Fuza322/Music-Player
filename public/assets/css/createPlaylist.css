@@ -86,34 +86,125 @@
 	box-shadow: 0 1px 30px rgba(0,0,0,0.25), 0 1px 30px rgba(0,0,0,0.22);
 }
 
-.help-text-load-music {
-	grid-column-start: 2;
-	grid-row-start: 1;
-	margin-bottom: auto;
+.help-text-search-music,
+.help-text-added-music {
 	font-family: 'Varela Round', sans-serif;
 	font-size: 30px;
 }
 
-.btn-shose-file {
-	color: #FF5440;
-  border-color: #FF5440;
-  background: -webkit-linear-gradient(left, #FF5440, #FF5440) no-repeat;
-  background: linear-gradient(to right, #FF5440, #FF5440) no-repeat;
-  background-size: 0% 100%;
+.input-search-song {
+	width: 98%;
+	font-size: 18px;
 	font-family: 'Varela Round', sans-serif;
-	font-size: 20px;
+	padding: 0.5%;
+	margin-top: 1%;
+	margin-bottom: 1%;
+	border: 3px solid #3b193d;
+	border-radius: 10px;
+	outline: none;
+	transition: 0.4s;
 }
 
-.div-song-list {
+.input-search-song:hover {
+	box-shadow: 0 1px 30px rgba(0,0,0,0.25), 0 1px 30px rgba(0,0,0,0.22);
+}
+
+.input-search-song:focus {
+	border: 3px solid #f55e18;
+	box-shadow: 0 1px 30px rgba(0,0,0,0.25), 0 1px 30px rgba(0,0,0,0.22);
+}
+
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+
+.div-song-list-create-playlist {
 	/*Список песен в виде плееров*/
-	height: 230px;
-	width: 99%;
+	height: auto;
+	width: 98%;
 	margin-top: 1%;
+	margin-bottom: 1%;
 	list-style-type: none;
-	border-radius: 20px;
-	border: 4px solid #3b193d;
+	border-radius: 10px;
+	border: 10px solid #3b193d;
+	background-color: #FF573D;
 	box-shadow: 0 8px 8px rgba(0,0,0,0.25), 0 8px 8px rgba(0,0,0,0.22);
 }
+
+.ul-audio-list-create-playlist {
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	list-style-type: none;
+}
+
+.li-audio-list-create-playlist {
+	display: flex;
+	justify-content: space-between;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	border-bottom-color: #3b193d;
+	padding: 3px;
+}
+
+.div-play-audio-image-create-playlist {
+	width: 50px;
+	height: 50px;
+	overflow: hidden;
+	border-radius: 25px;
+}
+
+.play-audio-image-create-playlist {
+	width: 50px;
+	height: 50px;
+}
+
+.div-audio-name-create-playlist {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	height: 50px;
+	width: 88%;
+}
+
+.div-added-audio-name-current-playlist {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	height: 50px;
+	width: 80%;
+}
+
+.audio-name-create-playlist {
+	display: block;
+	text-align: center;
+	margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+	font-family: 'Varela Round', sans-serif;
+	font-size: 19px;
+	color: #faf7f8;
+	white-space: nowrap;
+}
+
+.div-delete-audio-image-create-playlist {
+	width: 50px;
+	height: 50px;
+	overflow: hidden;
+	border-radius: 25px;
+}
+
+.delete-audio-image-create-playlist {
+	width: 50px;
+	height: 50px;
+}
+
+.help-text-added-music,
+.help-text-search-music {
+	font-family: 'Varela Round', sans-serif;
+	font-size: 22px;
+}
+
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
 
 .btn-create-playlist {
 	width: 98%;
@@ -191,7 +282,7 @@
 		height: auto;
 	}
 
-	.help-text-load-music {
+	.help-text-search-music {
 		grid-column-start: 2;
 		grid-row-start: 1;
 		margin-bottom: auto;
@@ -200,16 +291,98 @@
 		font-size: 15px;
 	}
 
-	.btn-shose-file {
-		color: #FF5440;
-	  border-color: #FF5440;
-	  background: -webkit-linear-gradient(left, #FF5440, #FF5440) no-repeat;
-	  background: linear-gradient(to right, #FF5440, #FF5440) no-repeat;
-	  background-size: 0% 100%;
+	.help-text-search-music,
+	.help-text-added-music {
+		margin-top: 3%;
 		font-family: 'Varela Round', sans-serif;
-		font-size: 10px;
-		margin-left: 2%;
-		margin-bottom: 2%;
+		font-size: 13px;
+		margin-left: 0;
+	}
+
+	.input-search-song {
+		width: 97%;
+		font-size: 12px;
+		font-family: 'Varela Round', sans-serif;
+		padding: 1%;
+		margin-top: 1%;
+		margin-bottom: 1%;
+		border: 2.5px solid #3b193d;
+		border-radius: 10px;
+		outline: none;
+		transition: 0.4s;
+	}
+
+	.div-song-list-create-playlist {
+		/*Список песен в виде плееров*/
+		height: auto;
+		width: 96%;
+		margin-top: 1%;
+		list-style-type: none;
+		border-radius: 10px;
+		border: 6px solid #3b193d;
+		box-shadow: 0 2px 10px rgba(0,0,0,0.25), 0 2px 10px rgba(0,0,0,0.22);
+	}
+
+	.li-audio-list-create-playlist {
+		display: flex;
+		justify-content: space-between;
+		border-bottom-width: 2px;
+		border-bottom-style: solid;
+		border-bottom-color: #3b193d;
+		padding: 3px;
+	}
+
+	.div-play-audio-image-create-playlist {
+		width: 25px;
+		height: 25px;
+		overflow: hidden;
+		border-radius: 25px;
+	}
+
+	.play-audio-image-create-playlist {
+		width: 25px;
+		height: 25px;
+	}
+
+	.div-audio-name-create-playlist {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		height: 25px;
+		width: 79%;
+	}
+
+	.div-added-audio-name-current-playlist {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		height: 25px;
+		width: 70%;
+	}
+
+	.audio-name-create-playlist {
+		display: block;
+		text-align: center;
+		margin-left: auto;
+	  margin-right: auto;
+	  margin-top: auto;
+	  margin-bottom: auto;
+		font-family: 'Varela Round', sans-serif;
+		font-size: 7px;
+		color: #faf7f8;
+		white-space: nowrap;
+	}
+
+	.div-delete-audio-image-create-playlist {
+		width: 25px;
+		height: 25px;
+		overflow: hidden;
+		border-radius: 25px;
+	}
+
+	.delete-audio-image-create-playlist {
+		width: 25px;
+		height: 25px;
 	}
 
 	.btn-create-playlist {
@@ -278,7 +451,7 @@
 		height: 50px;
 	}
 
-	.help-text-load-music {
+	.help-text-search-music {
 		grid-column-start: 2;
 		grid-row-start: 1;
 		margin-bottom: auto;
@@ -287,18 +460,101 @@
 		font-size: 25px;
 	}
 
-	.btn-shose-file {
-		color: #FF5440;
-	  border-color: #FF5440;
-	  background: -webkit-linear-gradient(left, #FF5440, #FF5440) no-repeat;
-	  background: linear-gradient(to right, #FF5440, #FF5440) no-repeat;
-	  background-size: 0% 100%;
+	.help-text-search-music,
+	.help-text-added-music {
+		margin-top: 1%;
+		font-family: 'Varela Round', sans-serif;
+		font-size: 20px;
+		margin-left: 0;
+	}
+
+	.input-search-song {
+		width: 97%;
+		font-size: 15px;
+		font-family: 'Varela Round', sans-serif;
+		padding: 1%;
+		margin-top: 1%;
+		margin-bottom: 1%;
+		border: 2.5px solid #3b193d;
+		border-radius: 10px;
+		outline: none;
+		transition: 0.4s;
+	}
+
+	.div-song-list-create-playlist {
+		/*Список песен в виде плееров*/
+		height: auto;
+		width: 96%;
+		margin-top: 1%;
+		list-style-type: none;
+		border-radius: 10px;
+		border: 9px solid #3b193d;
+		background-color: #FF573D;
+		box-shadow: 0 2px 10px rgba(0,0,0,0.25), 0 2px 10px rgba(0,0,0,0.22);
+	}
+
+	.li-audio-list-create-playlist {
+		display: flex;
+		justify-content: space-between;
+		border-bottom-width: 2px;
+		border-bottom-style: solid;
+		border-bottom-color: #3b193d;
+		padding: 3px;
+	}
+
+	.div-play-audio-image-create-playlist {
+		width: 25px;
+		height: 25px;
+		overflow: hidden;
+		border-radius: 25px;
+	}
+
+	.play-audio-image-create-playlist {
+		width: 25px;
+		height: 25px;
+	}
+
+	.div-audio-name-create-playlist {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		height: 25px;
+		width: 89%;
+	}
+
+	.div-added-audio-name-current-playlist {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		height: 25px;
+		width: 70%;
+	}
+
+	.audio-name-create-playlist {
+		display: block;
+		text-align: center;
+		margin-left: auto;
+	  margin-right: auto;
+	  margin-top: auto;
+	  margin-bottom: auto;
 		font-family: 'Varela Round', sans-serif;
 		font-size: 15px;
-		margin-left: 2%;
-		margin-bottom: 2%;
+		color: #faf7f8;
+		white-space: nowrap;
 	}
-	
+
+	.div-delete-audio-image-create-playlist {
+		width: 25px;
+		height: 25px;
+		overflow: hidden;
+		border-radius: 25px;
+	}
+
+	.delete-audio-image-create-playlist {
+		width: 25px;
+		height: 25px;
+	}
+
 	.btn-create-playlist {
 		width: 98%;
 		margin: 20px 2px;

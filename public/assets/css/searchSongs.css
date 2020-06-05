@@ -1,0 +1,228 @@
+.search-all-songs-container {
+	height: auto;
+	margin-top: 4%;
+	margin-bottom: 4%;
+	padding: 1%;
+	display: flex;
+	flex-direction: column;
+	background-color: #f0f5f0;
+	border-radius: 15px;
+	width: 80%;
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.div-input-search-all-songs {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.input-search-all-songs {
+	width: 98%;
+	font-size: 18px;
+	font-family: 'Varela Round', sans-serif;
+	padding: 0.5%;
+	margin-top: 1%;
+	margin-bottom: 1%;
+	border: 3px solid #3b193d;
+	border-radius: 10px;
+	outline: none;
+	transition: 0.4s;
+}
+
+.input-search-all-songs:hover {
+	box-shadow: 0 1px 30px rgba(0,0,0,0.25), 0 1px 30px rgba(0,0,0,0.22);
+}
+
+.input-search-all-songs:focus {
+	border: 3px solid #f55e18;
+	box-shadow: 0 1px 30px rgba(0,0,0,0.25), 0 1px 30px rgba(0,0,0,0.22);
+}
+
+.div-song-list-search-all-songs {
+	/*Список песен в виде плееров*/
+	height: auto;
+	width: 98%;
+	margin-top: 1%;
+	margin-bottom: 1%;
+	list-style-type: none;
+	border-radius: 10px;
+	border: 10px solid #3b193d;
+	background-color: #FF573D;
+	box-shadow: 0 8px 8px rgba(0,0,0,0.25), 0 8px 8px rgba(0,0,0,0.22);
+}
+
+.ul-audio-list-search-all-songs {
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	list-style-type: none;
+}
+
+.li-audio-list-search-all-songs {
+	display: flex;
+	justify-content: space-between;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	border-bottom-color: #3b193d;
+	padding: 3px;
+}
+
+.div-play-audio-image-search-all-songs {
+	width: 50px;
+	height: 50px;
+	overflow: hidden;
+	border-radius: 25px;
+}
+
+.play-audio-image-search-all-songs {
+	width: 50px;
+	height: 50px;
+}
+
+.div-audio-name-search-all-songs {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	height: 50px;
+	width: 88%;
+}
+
+.audio-name-search-all-songs {
+	display: block;
+	text-align: center;
+	margin-left: auto;
+ 	margin-right: auto;
+  	margin-top: auto;
+  	margin-bottom: auto;
+	font-family: 'Varela Round', sans-serif;
+	font-size: 19px;
+	color: #faf7f8;
+	white-space: nowrap;
+}
+
+@media only screen and (max-width: 375px)
+{
+	.input-search-all-songs {
+		width: 96%;
+		font-size: 12px;
+		font-family: 'Varela Round', sans-serif;
+		padding: 1%;
+		margin-top: 1%;
+		margin-bottom: 1%;
+		border: 3px solid #3b193d;
+		border-radius: 10px;
+		outline: none;
+		transition: 0.4s;
+	}
+
+	.div-song-list-search-all-songs {
+		/*Список песен в виде плееров*/
+		height: auto;
+		width: 96%;
+		margin-top: 1%;
+		list-style-type: none;
+		border-radius: 10px;
+		border: 6px solid #3b193d;
+		box-shadow: 0 2px 10px rgba(0,0,0,0.25), 0 2px 10px rgba(0,0,0,0.22);
+	}
+
+	.li-audio-list-search-all-songs {
+		display: flex;
+		justify-content: space-between;
+		border-bottom-width: 2px;
+		border-bottom-style: solid;
+		border-bottom-color: #3b193d;
+		padding: 3px;
+	}
+
+	.div-play-audio-image-search-all-songs {
+		width: 25px;
+		height: 25px;
+		overflow: hidden;
+		border-radius: 25px;
+	}
+
+	.play-audio-image-search-all-songs {
+		width: 25px;
+		height: 25px;
+	}
+
+	.div-audio-name-search-all-songs {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		height: 25px;
+		width: 79%;
+	}
+
+	.audio-name-search-all-songs {
+		display: block;
+		text-align: center;
+		margin-left: auto;
+	 	margin-right: auto;
+	  	margin-top: auto;
+	  	margin-bottom: auto;
+		font-family: 'Varela Round', sans-serif;
+		font-size: 7px;
+		color: #faf7f8;
+		white-space: nowrap;
+	}
+}
+
+@media screen and (min-width: 640px) and (max-width: 650px)
+{
+	.div-song-list-search-all-songs {
+		/*Список песен в виде плееров*/
+		height: auto;
+		width: 96%;
+		margin-top: 1%;
+		list-style-type: none;
+		border-radius: 10px;
+		border: 9px solid #3b193d;
+		background-color: #FF573D;
+		box-shadow: 0 2px 10px rgba(0,0,0,0.25), 0 2px 10px rgba(0,0,0,0.22);
+	}
+
+	.li-audio-list-search-all-songs {
+		display: flex;
+		justify-content: space-between;
+		border-bottom-width: 2px;
+		border-bottom-style: solid;
+		border-bottom-color: #3b193d;
+		padding: 3px;
+	}
+
+	.div-play-audio-image-search-all-songs {
+		width: 25px;
+		height: 25px;
+		overflow: hidden;
+		border-radius: 25px;
+	}
+
+	.play-audio-image-search-all-songs {
+		width: 25px;
+		height: 25px;
+	}
+
+	.div-audio-name-search-all-songs {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		height: 25px;
+		width: 89%;
+	}
+
+	.audio-name-search-all-songs {
+		display: block;
+		text-align: center;
+		margin-left: auto;
+	  	margin-right: auto;
+	  	margin-top: auto;
+	  	margin-bottom: auto;
+		font-family: 'Varela Round', sans-serif;
+		font-size: 15px;
+		color: #faf7f8;
+		white-space: nowrap;
+	}
+}

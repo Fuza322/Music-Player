@@ -1,0 +1,245 @@
+.audio-player-section {
+	position: sticky;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background: #39b54a;
+	text-align: center;
+	padding-bottom: 15px;
+	background-color: #FF573D;
+	box-shadow: 3px -3px 6px #bbb;
+	padding-bottom: 25px;
+}
+
+.player-input-div {
+	width: 100%;
+	outline: none;
+	position: relative;
+}
+
+.player-content {
+	height: 65px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.player-song-details {
+	text-align: start;
+	width: 13%;
+}
+
+.player-song-pic {
+	margin: 5px;
+	height: 50px;
+	width: 50px;
+}
+
+.player-duration-div {
+	width: 20%;
+	text-align: end;
+}
+
+.player-song-name {
+	margin-top: 10px;
+	margin-left: 10px;
+	font-weight: 600;
+	font-size: 23px;
+	font-family: 'Varela Round', sans-serif;
+}
+
+.player-song-author {
+	margin-left: 10px;
+	font-weight: 600;
+	color: #f0f5f0;
+	font-size: 18px;
+	font-family: 'Varela Round', sans-serif;
+}
+
+.player-img-button {
+	margin-top: 15px;
+	border: 0 solid #000;
+	background-color: transparent;
+	height: 40px;
+	width: 40px;
+}
+
+.player-img {
+	height: 40px;
+	width: 40px;
+}
+
+.player-duration-time {
+	margin: 20px 10px;
+	font-size: 20px;
+	font-family:sans-serif, monospace;
+}
+
+
+input[type="range"] {
+	background-color: transparent !important;
+	width: 100%;
+	position: absolute;
+	top: -10px;
+	left: 0;
+}
+
+.player-image {
+	height: 40px;
+	width: 40px;
+}
+
+
+/*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
+
+input[type='range'] {
+    overflow: hidden;
+    width: 100%;
+    -webkit-appearance: none;
+    outline: none;
+  }
+
+input[type='range']::-webkit-slider-runnable-track {
+  height: 10px;
+  -webkit-appearance: none;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  width: 10px;
+  -webkit-appearance: none;
+  height: 10px;
+  cursor: ew-resize;
+  background: #5e2862;
+  box-shadow: -100vw 0 0 100vw	#5e2862;
+}
+
+
+/*
+
+@@@@@@@@@@@@@@@@ MEDIA QUERIES @@@@@@@@@@@@@@@@
+
+*/
+@media only screen and (max-width: 375px)
+{
+	.audio-player-section {
+		position: sticky;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		background: #39b54a;
+		text-align: center;
+		padding-bottom: 15px;
+		background-color: #FF573D;
+		box-shadow: 3px -3px 6px #bbb;
+		padding-bottom: 15px;
+	}
+
+	.player-content {
+		height: 35px;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.player-song-details {
+		text-align: start;
+		width: 37%;
+	}
+
+	.player-song-name {
+		margin-top: 5px;
+		margin-left: 5px;
+		font-weight: 600;
+		font-size: 12px;
+		font-family: 'Varela Round', sans-serif;
+	}
+
+	.player-song-author {
+		margin-left: 5px;
+		font-weight: 600;
+		color: #f0f5f0;
+		font-size: 10px;
+		font-family: 'Varela Round', sans-serif;
+	}
+
+	.div-player-inteface {
+		width: 100px;
+	}
+
+	.player-img-button {
+		margin-top: 15px;
+		border: 0 solid #000;
+		background-color: transparent;
+		height: 20px;
+		width: 20px;
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	.player-img {
+		height: 20px;
+		width: 20px;
+	}
+
+	.player-duration-time {
+		margin: 20px 10px;
+		font-size: 10px;
+		font-family:sans-serif, monospace;
+	}
+
+	.player-duration-div {
+		width: 150px;
+		text-align: end;
+	}
+}
+
+@media screen and (min-width: 640px) and (max-width: 650px)
+{
+	.audio-player-section {
+		position: sticky;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		background: #39b54a;
+		text-align: center;
+		padding-bottom: 15px;
+		background-color: #FF573D;
+		box-shadow: 3px -3px 6px #bbb;
+		padding-bottom: 13px;
+	}
+
+	.player-song-details {
+		text-align: start;
+		width: 15%;
+	}
+
+	.player-song-name {
+		margin-top: 10px;
+		margin-left: 10px;
+		font-weight: 600;
+		font-size: 15px;
+		font-family: 'Varela Round', sans-serif;
+	}
+
+	.player-song-author {
+		margin-left: 10px;
+		font-weight: 600;
+		color: #f0f5f0;
+		font-size: 13px;
+		font-family: 'Varela Round', sans-serif;
+	}
+
+	.div-player-inteface {
+		width: 200px;
+	}
+
+	.player-img-button {
+		margin-top: 15px;
+		border: 0 solid #000;
+		background-color: transparent;
+		height: 40px;
+		width: 40px;
+		margin-left: 5px;
+		margin-right: 5px;
+	}
+}

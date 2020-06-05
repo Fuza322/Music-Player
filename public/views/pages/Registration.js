@@ -44,8 +44,12 @@ let Registration = {
           }
           else {
             firebase.auth().createUserWithEmailAndPassword(email, pass)
-              .then(function(regUser){
-                window.location.href = '/';
+              .then(async function(regUser){
+                  const snapshot = await firebase.database().ref('/user_count/id').once('value');
+                  let lastUser = snapshot.val();
+                  await firebase.database().ref("/play_queue/" + lastUser).set({ user : email});
+                  await firebase.database().ref('/user_count/id').set(lastUser + 1);
+                window.location.href = '/#/';
                 alert(`User ${email} was successfully created!`);
               }).catch(function(error){
                 alert(error.message);

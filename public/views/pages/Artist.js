@@ -1,4 +1,5 @@
 import Utils        from './../../services/Utils.js'
+import * as DS from './../../services/DS.js'
 
 async function getArtist(id){
   const snapshot = await firebase.database().ref('/artists/' + id).once('value');
@@ -21,14 +22,11 @@ let Artist = {
                         <p id='artist_genre' class="artist-genre"></p>
                       </div>
                   </div>
-                  <div id='audio-container' class="div-song-list">
-                    <ul class='audio-list' id=audio-list>
+                  <div id='audio-container' class="div-song-list-artist">
+                    <ul class='ul-audio-list-artist' id=audio-list>
                     </ul>
                   </div>
                   <button class="btn-on-main-page" onclick="window.location.href='/'">На главную</button>
-          </section>
-          <section id='player-container' class="fixed-music-player-container">
-            <audio id='audio-player' controls='true'>
           </section>
         `
         return view
@@ -43,6 +41,7 @@ let Artist = {
       const artistGenre = document.getElementById('artist_genre');
       const audioContainer = document.getElementById('audio-container');
       const audioList = document.getElementById('audio-list');
+      const artist = await getArtist(request.id);
 
       function insertArtistPic(id, img){
         storageRef.child(`artists/${id}.png`).getDownloadURL().then(function(url){
@@ -52,17 +51,30 @@ let Artist = {
         });
       }
 
-      function getAudio(id, list){
-        storageRef.child(`audio/artists/${id}`).listAll().then(function(res){
-          res.items.forEach(function(itemRef){
-            let songContainer = document.createElement('LI');
-            songContainer.className = 'song-container';
-            songContainer.id = `${itemRef.fullPath}`;
-            songContainer.innerText = `${itemRef.name}`;
-            list.appendChild(songContainer);
+      async function getAudio(id, list){
+        let snapshot = await firebase.database().ref('/song');
+        snapshot.on("value", async function(snapshot) {
+          console.log(snapshot.val());
+          let songsList = snapshot.val();
+          songsList.forEach(function(itemRef, index){
+            if (itemRef.author == artist.name){
+              let songLi = document.createElement('LI');
+              songLi.className = 'li-audio-list-artist';
+              //songLi.id = `${itemRef.fullPath}`;
+              songLi.innerHTML = `
+                                    <div class="div-play-audio-image-artist">
+                                        <img id="${index}" class="play-audio-image-artist" src="assets/images/playerImages/playButton.png" alt="Play-audio-button">
+                                    </div>
+                                    <div class="div-audio-name-artist">
+                                      <div>
+                                        <p class="audio-name-artist">${itemRef.name + " - " + itemRef.author}</p>
+                                      </div>
+                                    </div>
+                                 `
+              // songLi.innerText = `${itemRef.name}`;
+              list.appendChild(songLi);
+            }
           });
-        }).catch(function(error){
-          alert(error.message);
         });
       }
 
@@ -75,21 +87,24 @@ let Artist = {
       }
 
       insertArtistPic(request.id, artistPic);
-      getAudio(request.id, audioList);
-      const artist = await getArtist(request.id);
+      await getAudio(request.id, audioList);
+     
 
       artistName.innerText = artist.name;
-      artistGenre.innerText = `Жанр исполнителя: ${artist.genre}`;
+      //artistGenre.innerText = `Жанр исполнителя: ${artist.genre}`;
 
-      audioList.onclick = function(event) {
-        let target = event.target;
-
-        if (target.tagName != 'LI') {
-          return; }
-        else {
-          dowloadSong(target.id);
-        }
-      }
+       audioList.addEventListener("click",async function(e) {
+            console.log(e.target.nodeName);
+            if(e.target && e.target.nodeName == "IMG") {
+                console.log(e.target.id);
+                if (firebase.auth().currentUser){
+                    DS.pushPlaylist(firebase.auth().currentUser.email, [e.target.id]);
+                }else{
+                    alert("Login first.")
+                }
+                //firebase.database().ref('/playlists/' + playlistId + "/song_list/" + e.target.id).remove();
+            }
+        });
 
     }
 }

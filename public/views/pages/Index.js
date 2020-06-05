@@ -1,6 +1,5 @@
 async function getPlaylists(){
   const snapshot = await firebase.database().ref('/playlists').once('value');
-
   return snapshot.val();
 }
 
@@ -9,6 +8,16 @@ let Index = {
         let view =  /*html*/`
             <nav id='navbar' class="main-nav-container">
             </nav>
+
+            <section class="search-all-songs-section-container">
+                <h2 class="sections-text" id="CreatePlaylist">Поиск</h2>
+                <p class="description-text">
+                    Поиск песни среди всех загруженных.
+                </p>
+                <div class="div-search-all-songs-button">
+                  <a href="/#/search" class="btn-search-all-songs-page search-button" id='submitBtn'>Перейти к поиску</a>
+                </div>
+            </section>
             <!----------->
             <section class="playlist-container">
                 <h2 class="sections-text" id="CreatePlaylist">Создать плейлист</h2>
@@ -18,7 +27,7 @@ let Index = {
                 </p>
                 <div class="div-li-buttons">
                     <ul id='playlists-container' class="box-items">
-                        <li class="li-buttom"> <a href="/#/playlist"><img class="size-image-add-playlist" src="assets/images/AddPlaylist.png" alt="AddPlaylistImage"></img></a> </li>
+                        <li class="li-buttom"><a href="/#/playlistnew"><img class="size-image-add-playlist" src="assets/images/AddPlaylist.png" alt="AddPlaylistImage"></img></a></li>
                     </ul>
                 </div>
             </section>
@@ -40,7 +49,7 @@ let Index = {
                 </div>
             </section>
             <!----------->
-            <section class="music-artists-container">
+            <section class="playlist-container">
                 <h2 class="sections-text" id="MusicArtists">Исполнители</h2>
                 <div class="description-text">
                     Слушайте композиции ваших любимых исполнителей.
@@ -56,7 +65,7 @@ let Index = {
                         <li><a class="music-artists-ref" href="/#/artists/melnica">Мельница</a></li>
                         <li><a class="music-artists-ref" href="/#/artists/fiddlers_green">Fiddler's Green</a></li>
                         <li><a class="music-artists-ref" href="/#/artists/adele">Adele</a></li>
-                        <li><a class="music-artists-ref" href="/#/artists/dana_sokolova">Dana Sokolova</a></li>
+                        <li><a class="music-artists-ref" href="/#/artists/dana_sokolova">Дана Соколова</a></li>
                         <li><a class="music-artists-ref" href="/#/artists/bach">Johann Bach</a></li>
                         <li><a class="music-artists-ref" href="/#/artists/bethoven">Van Bethoven</a></li>
                     </ul>
@@ -64,7 +73,16 @@ let Index = {
                 <div>
                 <div>
             </section>
-            <section id='musicplayer' class="fixed-music-player-container">
+
+
+            <section class="load-new-song-section-container">
+                <h2 class="sections-text" id="CreatePlaylist">Загрузка</h2>
+                <p class="description-text">
+                    Не нашли нужный трек? Загрузите, чтобы его могли послушать все!
+                </p>
+                <div class="div-load-new-song-button">
+                  <a href="/#/upload" class="btn-load-new-song-page load-button" id='submitBtn'>Перейти к загрузке</a>
+                </div>
             </section>
         `
         return view
@@ -73,22 +91,28 @@ let Index = {
         document.getElementById('page_container').className = 'main-container';
         const playlistsContainer = document.getElementById('playlists-container');
         const playlists = await getPlaylists();
-
         function renderPlaylists(){
-          if (playlists){
-            playlists.forEach(function(playlist){
-              let playlistA = document.createElement('A');
-              playlistA.href = `/#/playlists/${playlist.id}`;
-              playlistA.className = 'playlist-name';
-              playlistA.innerHTML = `<li class="li-buttom">
-                                          <p>${playlist.name}</p>
-                                      </li>`;
-              playlistsContainer.appendChild(playlistA);
+          if (playlists && firebase.auth().currentUser){
+            console.log(playlists);
+            playlists.forEach(function(playlist,index){
+                console.log(index);
+              if (playlist.created == firebase.auth().currentUser.email){
+                  let playlistLi = document.createElement('LI');
+                  playlistLi.className = 'li-buttom';
+                  playlistLi.innerHTML = `<a href='/#/playlists/${index}' class='playlist-name'>
+                                            <div class="div-playlist-name">
+                                              <p>${playlist.name}</p>
+                                            </div>
+                                         </a>`;
+                 playlistsContainer.appendChild(playlistLi);
+             }
             });
           }
         }
 
         renderPlaylists();
+
+
     }
 
 }

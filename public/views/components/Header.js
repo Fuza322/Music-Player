@@ -1,7 +1,7 @@
 let Header = {
     render: async () => {
         let view =  /*html*/`
-            <a href="index.html">
+            <a href="/#/">
                 <div id="logo-div-flex">
                     <img id="logo-size-header" src="assets/images/headerLogo.jpg" alt="Logo">
                     <div id="div-music-player-name">Play Music</div>

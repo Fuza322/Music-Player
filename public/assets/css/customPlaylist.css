@@ -1,6 +1,7 @@
 .custom-playlist-container {
 	display: flex;
 	justify-content: center;
+	align-items: center;
 	height: auto;
 	width: 80%;
 	margin-top: 4%;
@@ -18,13 +19,16 @@
 	width: 100%;
 }
 
-.div-create-custom-info {
+/****************************/
+.div-custom-playlist-info {
+	display: flex;
 	justify-content: start;
 	width: 100%;
 	height: auto;
 	margin-top: 1%;
 	margin-bottom: 1%;
 }
+/****************************/
 
 .div-custom-playlist-name {
 	display: flex;
@@ -50,16 +54,109 @@
 	font-size: 30px;
 }
 
-.div-song-list {
+/****************************/
+
+.div-btn-edit-playlist {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 74%;
+	height: 250px;
+}
+
+.btn-edit-playlist {
+	width: 80%;
+	height: 20%;
+	margin: 15px 10px;
+	color: #FF5440;
+	border-color: #FF5440;
+	background: -webkit-linear-gradient(left, #FF5440, #FF5440) no-repeat;
+	background: linear-gradient(to right, #FF5440, #FF5440) no-repeat;
+	background-size: 0% 100%;
+}
+
+.btn-edit-playlist:hover {
+	background-size: 100% 100%;
+	color: #27323A;
+}
+/****************************/
+
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+
+.div-song-list-custom-playlist {
 	/*Список песен в виде плееров*/
-	height: 230px;
-	width: 99%;
+	height: auto;
+	width: 98%;
 	margin-top: 1%;
 	list-style-type: none;
-	border-radius: 20px;
-	border: 4px solid #3b193d;
+	border-radius: 10px;
+	border: 10px solid #3b193d;
+	background-color: #FF573D;
 	box-shadow: 0 8px 8px rgba(0,0,0,0.25), 0 8px 8px rgba(0,0,0,0.22);
 }
+
+.ul-audio-list-current-playlist {
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	list-style-type: none;
+}
+
+.li-audio-list-current-playlist {
+	display: flex;
+	justify-content: space-between;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	border-bottom-color: #3b193d;
+	padding: 3px;
+}
+
+.div-play-audio-image-current-playlist {
+	width: 50px;
+	height: 50px;
+	overflow: hidden;
+	border-radius: 25px;
+}
+
+.play-audio-image-current-playlist {
+	width: 50px;
+	height: 50px;
+}
+
+.div-audio-name-current-playlist {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	height: 50px;
+	width: 88%;
+}
+
+.audio-name-current-playlist {
+	display: block;
+	text-align: center;
+	margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+	font-family: 'Varela Round', sans-serif;
+	font-size: 19px;
+	color: #faf7f8;
+	white-space: nowrap;
+}
+
+.div-delete-audio-image-current-playlist {
+	width: 50px;
+	height: 50px;
+	overflow: hidden;
+	border-radius: 25px;
+}
+
+.delete-audio-image-current-playlist {
+	width: 50px;
+	height: 50px;
+}
+
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
 
 .btn-on-main-page,
 .btn-delete-playlist {
@@ -85,18 +182,250 @@
 
 */
 
-@media only screen and (max-width: 980px)
+@media only screen and (max-width: 375px)
 {
-	.div-custom-playlist-info {
-		grid-template-columns: 270px 500px;
-		grid-template-rows: 120px 150px;
+	.div-custom-playlist-name {
+		display: flex;
+		justify-content: center;
+		overflow-x:hidden;
+		white-space: pre-wrap;
+		margin: 10px;
+		height: 120px;
+		width: 120px;
+		border-radius: 30%;
+		border: 5px solid #3b193d;
+		box-shadow: 0 8px 8px rgba(0,0,0,0.25), 0 8px 8px rgba(0,0,0,0.22);
+	}
+
+	.custom-playlist-name {
+		display: block;
+		text-align: center;
+		margin-left: auto;
+	  margin-right: auto;
+	  margin-top: auto;
+	  margin-bottom: auto;
+		font-family: 'Varela Round', sans-serif;
+		font-size: 15px;
+	}
+
+	.div-btn-edit-playlist {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 50%;
+		height: 150px;
+	}
+
+	.btn-edit-playlist {
+		width: 80%;
+		height: 28%;
+		margin: 15px 10px;
+		color: #FF5440;
+		border-color: #FF5440;
+		background: -webkit-linear-gradient(left, #FF5440, #FF5440) no-repeat;
+		background: linear-gradient(to right, #FF5440, #FF5440) no-repeat;
+		background-size: 0% 100%;
+	}
+
+
+	.div-song-list-custom-playlist {
+		/*Список песен в виде плееров*/
+		height: auto;
+		width: 96%;
+		margin-top: 1%;
+		list-style-type: none;
+		border-radius: 10px;
+		border: 6px solid #3b193d;
+		box-shadow: 0 2px 10px rgba(0,0,0,0.25), 0 2px 10px rgba(0,0,0,0.22);
+	}
+
+	.li-audio-list-current-playlist {
+		display: flex;
+		justify-content: space-between;
+		border-bottom-width: 2px;
+		border-bottom-style: solid;
+		border-bottom-color: #3b193d;
+		padding: 3px;
+	}
+
+	.div-play-audio-image-current-playlist {
+		width: 25px;
+		height: 25px;
+		overflow: hidden;
+		border-radius: 25px;
+	}
+
+	.play-audio-image-current-playlist {
+		width: 25px;
+		height: 25px;
+	}
+
+	.div-audio-name-current-playlist {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		height: 25px;
+		width: 79%;
+	}
+
+	.audio-name-current-playlist {
+		display: block;
+		text-align: center;
+		margin-left: auto;
+	  margin-right: auto;
+	  margin-top: auto;
+	  margin-bottom: auto;
+		font-family: 'Varela Round', sans-serif;
+		font-size: 7px;
+		color: #faf7f8;
+		white-space: nowrap;
+	}
+
+	.div-delete-audio-image-current-playlist {
+		width: 25px;
+		height: 25px;
+		overflow: hidden;
+		border-radius: 25px;
+	}
+
+	.delete-audio-image-current-playlist {
+		width: 25px;
+		height: 25px;
+	}
+
+	.btn-delete-playlist,
+	.btn-on-main-page {
+		width: 98%;
+		margin: 6px 2px;
+		color: #FF5440;
+		border-color: #FF5440;
+		background: -webkit-linear-gradient(left, #FF5440, #FF5440) no-repeat;
+		background: linear-gradient(to right, #FF5440, #FF5440) no-repeat;
+		background-size: 0% 100%;
 	}
 }
 
-@media screen and (min-width: 1560px)
+
+@media screen and (min-width: 640px) and (max-width: 650px)
 {
-	.div-custom-playlist-info {
-		grid-template-columns: 270px 970px;
-		grid-template-rows: 120px 150px;
+
+	.div-custom-playlist-name {
+		display: flex;
+		justify-content: center;
+		overflow-x:hidden;
+		white-space: pre-wrap;
+		margin: 10px;
+		height: 200px;
+		width: 200px;
+		border-radius: 30%;
+		border: 10px solid #3b193d;
+		box-shadow: 0 8px 8px rgba(0,0,0,0.25), 0 8px 8px rgba(0,0,0,0.22);
+	}
+
+	.custom-playlist-name {
+		display: block;
+		text-align: center;
+		margin-left: auto;
+	  margin-right: auto;
+	  margin-top: auto;
+	  margin-bottom: auto;
+		font-family: 'Varela Round', sans-serif;
+		font-size: 25px;
+	}
+
+	.div-btn-edit-playlist {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 50%;
+		height: 250px;
+	}
+
+	.btn-edit-playlist {
+		width: 80%;
+		height: 20%;
+		margin: 15px 10px;
+		color: #FF5440;
+		border-color: #FF5440;
+		background: -webkit-linear-gradient(left, #FF5440, #FF5440) no-repeat;
+		background: linear-gradient(to right, #FF5440, #FF5440) no-repeat;
+		background-size: 0% 100%;
+	}
+
+
+	.div-song-list-custom-playlist {
+		/*Список песен в виде плееров*/
+		height: auto;
+		width: 96%;
+		margin-top: 1%;
+		list-style-type: none;
+		border-radius: 10px;
+		border: 9px solid #3b193d;
+		box-shadow: 0 2px 10px rgba(0,0,0,0.25), 0 2px 10px rgba(0,0,0,0.22);
+	}
+
+	.li-audio-list-current-playlist {
+		display: flex;
+		justify-content: space-between;
+		border-bottom-width: 2px;
+		border-bottom-style: solid;
+		border-bottom-color: #3b193d;
+		padding: 3px;
+	}
+
+	.div-play-audio-image-current-playlist {
+		width: 25px;
+		height: 25px;
+		overflow: hidden;
+		border-radius: 25px;
+	}
+
+	.play-audio-image-current-playlist {
+		width: 25px;
+		height: 25px;
+	}
+
+	.div-audio-name-current-playlist {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		height: 25px;
+		width: 89%;
+	}
+
+	.audio-name-current-playlist {
+		display: block;
+		text-align: center;
+		margin-left: auto;
+	  margin-right: auto;
+	  margin-top: auto;
+	  margin-bottom: auto;
+		font-family: 'Varela Round', sans-serif;
+		font-size: 15px;
+		color: #faf7f8;
+		white-space: nowrap;
+	}
+
+	.div-delete-audio-image-current-playlist {
+		width: 25px;
+		height: 25px;
+		overflow: hidden;
+		border-radius: 25px;
+	}
+
+	.delete-audio-image-current-playlist {
+		width: 25px;
+		height: 25px;
+	}
+
+	.btn-delete-playlist,
+	.btn-on-main-page {
+		width: 98%;
+		margin: 8px 2px;
+		color: #FF5440;
+		border-color: #FF5440;
+		background: -webkit-linear-gradient(left, #FF5440, #FF5440) no-repeat;
+		background: linear-gradient(to right, #FF5440, #FF5440) no-repeat;
+		background-size: 0% 100%;
 	}
 }

@@ -15,7 +15,7 @@ let PlaylistNew = {
           </nav>
           <section class="create-playlist-container">
             <div class="div-create-playlist">
-              <h2 class="sections-text" id="MusicGenre">Создание плейлиста:</h2>
+              <h2 class="sections-text" id="MusicGenre">Редактирование плейлиста:</h2>
               <div class="div-create-playlist-info">
                 <div class="div-create-playlist-img">
                   <img class="add-playlist-image" src="assets/images/AddPlaylist.png" alt="AddPlaylistImage">
@@ -36,7 +36,7 @@ let PlaylistNew = {
                 <ul id='search-ul' class='ul-audio-list-create-playlist'>
                 </ul>
               </div>
-              <button class="btn-create-playlist" id='submitBtn'>Создать</button>
+              <button class="btn-create-playlist" id='submitBtn'>Сохранить</button>
             </div>
           </section>
           <section id='musicplayer' class="fixed-music-player-container">
@@ -46,24 +46,14 @@ let PlaylistNew = {
     }
     ,
     after_render: async () => {
-
-      const snapshot = await firebase.database().ref('/playlist_counter/id').once('value');
-
-      const playlistId = snapshot.val();
-      console.log(playlistId);
-       firebase.database().ref('playlists/' + playlistId).set({
-                    name: "Новый плейлист",
-                    created: firebase.auth().currentUser.email,
-                    song_id: 1
-                });
-
+      const request = Utils.parseRequestURL();
       const searchInput = document.getElementById('search-input');
       const searchContainer = document.getElementById('search-ul');
       const songsContainer = document.getElementById('audio-list');
 
       async function update(){
         songsContainer.innerHTML ="";
-        let snapshot = await firebase.database().ref('/playlists/' + playlistId + '/song_list').once("value");
+        let snapshot = await firebase.database().ref('/playlists/' + request.id + '/song_list').once("value");
         //snapshot.on("value", async function(snapshot) {
             let idList = snapshot.val();
             console.log(idList);
@@ -79,7 +69,7 @@ let PlaylistNew = {
                     <div class="div-play-audio-image-current-playlist">
                                       <img id=${songId} class="play-audio-image-current-playlist" src="assets/images/playerImages/playButton.png" alt="Play-audio-button">
                                   </div>
-                                  <div class="div-added-audio-name-current-playlist">
+                                  <div class="div-audio-name-current-playlist">
                                     <div>
                                       <p class="audio-name-current-playlist">${song.name} - ${song.author}</p>
                                     </div>
@@ -95,8 +85,10 @@ let PlaylistNew = {
       }
 
       function pushSongId(id) {
-            firebase.database().ref('/playlists/' + playlistId + "/song_id").set(id);
+            firebase.database().ref('/playlists/' + request.id + "/song_id").set(id);
         }
+
+      await update();
       searchInput.addEventListener('keyup',async function(event) {
             let query = searchInput.value.toLowerCase();
             const snapshot = await firebase.database().ref('/song');
@@ -146,11 +138,11 @@ let PlaylistNew = {
             if(e.target && e.target.nodeName == "DIV") {
                 console.log(e.target.id + " was clicked");
 
-                const snapshot = await firebase.database().ref('/playlists/' + playlistId  + "/song_id").once('value');
+                const snapshot = await firebase.database().ref('/playlists/' + request.id  + "/song_id").once('value');
                 const lastSongId = snapshot.val();
-                console.log('/playlists/' + playlistId  + "/song_id");
+                console.log('/playlists/' + request.id  + "/song_id");
                 pushSongId(lastSongId + 1);
-                firebase.database().ref('/playlists/' + playlistId + "/song_list/" + lastSongId).set({
+                firebase.database().ref('/playlists/' + request.id + "/song_list/" + lastSongId).set({
                     id : e.target.id
                 }, function(error) {
                     if (error) {
@@ -169,7 +161,7 @@ let PlaylistNew = {
                     DS.pushPlaylist(firebase.auth().currentUser.email, [e.target.id]);
                 }else{
                   if (e.target.dataset.delete){
-                    firebase.database().ref('/playlists/' + playlistId + "/song_list/" + e.target.id).remove();
+                    firebase.database().ref('/playlists/' + request.id + "/song_list/" + e.target.id).remove();
                     update();
                   }else{
                     alert("Login first.")
@@ -183,10 +175,10 @@ let PlaylistNew = {
          const submit = document.getElementById('submitBtn');
          const name = document.getElementById('playlist-name');
          submit.addEventListener("click",async function(e) {
-            firebase.database().ref('/playlists/' + playlistId + "/name").set(name.value);
+            firebase.database().ref('/playlists/' + request.id + "/name").set(name.value);
             //console.log(playlistId+1);
-            firebase.database().ref('/playlist_counter/id').set(playlistId+1);
-            document.location.href ="/#/playlists/" + playlistId;
+            //firebase.database().ref('/playlist_id/id').set(playlistId+1);
+            document.location.href ="/#/playlists/" + request.id;
         });
 
 
